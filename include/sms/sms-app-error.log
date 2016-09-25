@@ -1,0 +1,5 @@
+[21-Sep-2016 07:21:26 Europe/Berlin] PHP Fatal error:  Class 'SmsReceiver' not found in D:\xampp\htdocs\tad_hack\include\sms\base_sms.php on line 20
+[21-Sep-2016 07:21:39 Europe/Berlin] PHP Fatal error:  Class 'SmsReceiver' not found in D:\xampp\htdocs\tad_hack\include\sms\base_sms.php on line 20
+[21-Sep-2016 07:22:44 Europe/Berlin] PHP Warning:  Division by zero in D:\xampp\htdocs\tad_hack\include\sms\base_sms.php on line 83
+[21-Sep-2016 07:43:52 Europe/Berlin] PHP Warning:  Division by zero in D:\xampp\htdocs\tad_hack\include\sms\base_sms.php on line 88
+[21-Sep-2016 07:44:30 Europe/Berlin] PHP Warning:  Division by zero in D:\xampp\htdocs\tad_hack\include\sms\base_sms.php on line 88

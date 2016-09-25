@@ -1,0 +1,7 @@
+[25-Sep-2016 06:07:32 Europe/Berlin] PHP Notice:  Use of undefined constant address - assumed 'address' in D:\xampp\htdocs\tad_hack\sms_index.php on line 41
+[25-Sep-2016 06:11:50 Europe/Berlin] PHP Notice:  Undefined variable: db in D:\xampp\htdocs\tad_hack\sms_index.php on line 55
+[25-Sep-2016 06:11:50 Europe/Berlin] PHP Fatal error:  Call to a member function isUserExisted_ViaMail() on null in D:\xampp\htdocs\tad_hack\sms_index.php on line 55
+[25-Sep-2016 06:13:36 Europe/Berlin] PHP Notice:  Undefined variable: db in D:\xampp\htdocs\tad_hack\sms_index.php on line 55
+[25-Sep-2016 06:13:36 Europe/Berlin] PHP Fatal error:  Call to a member function isUserExisted_ViaMail() on null in D:\xampp\htdocs\tad_hack\sms_index.php on line 55
+[25-Sep-2016 06:16:30 Europe/Berlin] PHP Notice:  Undefined variable: db in D:\xampp\htdocs\tad_hack\sms_index.php on line 55
+[25-Sep-2016 06:16:30 Europe/Berlin] PHP Fatal error:  Call to a member function isUserExisted_ViaMail() on null in D:\xampp\htdocs\tad_hack\sms_index.php on line 55

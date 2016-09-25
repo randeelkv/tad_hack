@@ -22,16 +22,36 @@ class DB_Functions {
      * Storing new user
      * returns user details
      */
-    public function storeUser($name, $email, $password) {
+    public function storeUser($name, $mobile, $password,$nic,$type) {
         $uuid = uniqid('', true);
         $hash = $this->hashSSHA($password);
         $encrypted_password = $hash["encrypted"]; // encrypted password
         $salt = $hash["salt"]; // salt
-		$result = mysql_query("INSERT INTO users(unique_id, name, email, encrypted_password, salt, created_at) VALUES('$uuid', '$name', '$email', '$encrypted_password', '$salt', NOW())");
+        $result = mysql_query("INSERT INTO users( usr_name,usr_type,usr_nic, usr_mobile, usr_encrypted_password, usr_salt, usr_created_at) VALUES( '$name','$type','$nic', '$mobile', '$encrypted_password', '$salt', NOW())");
         // check for successful store
         if ($result) {
             // get user details 
-            $result = mysql_query("SELECT * FROM users WHERE unique_id = \"$uuid\"");
+            $result = mysql_query("SELECT * FROM users WHERE usr_nic = \"$nic\"");
+            // return user details
+            return mysql_fetch_array($result);
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Storing new user
+     * returns user details
+     */
+    public function storeOtherUser($name, $email, $password,$type,$nic ) {
+        $uuid = uniqid('', true);
+        $hash = $this->hashSSHA($password);
+        $encrypted_password = $hash["encrypted"]; // encrypted password
+        $salt = $hash["salt"]; // salt
+		$result = mysql_query("INSERT INTO users(usr_name,usr_type,usr_nic, usr_email, usr_encrypted_password, usr_salt, usr_created_at) VALUES('$name','$type','$nic', '$email', '$encrypted_password', '$salt', NOW())");
+        if ($result) {
+            // get user details 
+            $result = mysql_query("SELECT * FROM users WHERE usr_nic = \"$nic\"");
             // return user details
             return mysql_fetch_array($result);
         } else {
@@ -43,7 +63,7 @@ class DB_Functions {
      * Get user by email and password
      */
     public function getUserByEmailAndPassword($email, $password) {
-        $result = mysql_query("SELECT * FROM users WHERE email = '$email'") or die(mysql_error());
+        $result = mysql_query("SELECT * FROM users WHERE mobile = '$email'") or die(mysql_error());
         // check for result 
         $no_of_rows = mysql_num_rows($result);
         if ($no_of_rows > 0) {
@@ -63,10 +83,26 @@ class DB_Functions {
     }
 
     /**
-     * Check user is existed or not
+     * Check user is existed or not via mail
      */
-    public function isUserExisted($email) {
-        $result = mysql_query("SELECT email from users WHERE email = '$email'");
+    public function isUserExisted_ViaMail($nic) {
+        $result = mysql_query("SELECT usr_nic from users WHERE usr_nic = '$nic'");
+        $no_of_rows = mysql_num_rows($result);
+        echo $no_of_rows;
+        if ($no_of_rows > 0) {
+            // user existed 
+            return true;
+        } else {
+            // user not existed
+            return false;
+        }
+    }
+
+    /**
+     * Check user is existed or not via sms
+     */
+    public function isUserExisted_ViaSMS($mobile) {
+        $result = mysql_query("SELECT usr_moblie from users WHERE usr_moblie = '$mobile'");
         $no_of_rows = mysql_num_rows($result);
         if ($no_of_rows > 0) {
             // user existed 
