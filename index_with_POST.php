@@ -27,7 +27,7 @@ if (isset($_POST['tag']) && $_POST['tag'] != '') {
 			// user found
 			// echo json with success = 1
 			$response["success"] = 1;
-			$response["uid"] = $user["unique_id"];
+			// $response["uid"] = $user["unique_id"];
 			$response["user"]["name"] = $user["name"];
 			$response["user"]["email"] = $user["email"];
 			$response["user"]["created_at"] = $user["created_at"];
@@ -114,26 +114,62 @@ if (isset($_POST['tag']) && $_POST['tag'] != '') {
 		            if ($db->isUserExisted_ViaMail($nic)) {
 		                // user is already existed - error response
 		                $response["error"] = 2;
-		                $response["error_msg"] = "User already existed";
+		                $response["error_msg"] = "User already exist";
 		                echo json_encode($response);
 		            } else {
 		                // store user
-		                $user = $db->storeOtherUser($name, $email, $password, $type , $nic);
-		                if ($user) {
-		                    // user stored successfully
-		                    $response["success"] = 1;
-		                    $response["uid"] = $user["nic"];
-		                    $response["user"]["name"] = $user["name"];
-		                    // $response["user"]["email"] = $user["email"];
-		                    $response["user"]["created_at"] = $user["created_at"];
-		                    $response["user"]["updated_at"] = $user["updated_at"];
-		                    echo json_encode($response);
-		                } else {
-		                    // user failed to store
-		                    $response["error"] = 1;
-		                    $response["error_msg"] = "Invalid Request";
-		                    echo json_encode($response);
-		                }
+		                if($type == 'doctor'){
+		                	$regNo = $_POST["regNo"];
+		                	$speciality = $_POST["speciality"];
+		                	$location = $_POST["location"];
+		                	if($db->isDoctorExisted_ViaMail($regNo,$userId)){
+		                			// user is already existed - error response
+					                $response["error"] = 2;
+					                $response["error_msg"] = "Doctor data already exist";
+					                echo json_encode($response);
+		                		}else{
+		                			$user = $db->storeOtherUser($name, $email, $password, $type , $nic);
+					                if ($user) {
+			                			$userId = $user["usr_id"];
+				                		$doctor = $db->storeDoctorData($regNo, $userId, $speciality,$location );
+		                				if ($doctor) {
+						                    // user stored successfully
+						                    $response["success"] = 1;
+						                    $response["uid"] = $user["nic"];
+						                    $response["user"]["name"] = $user["name"];
+						                    // $response["user"]["email"] = $user["email"];
+						                    $response["user"]["created_at"] = $user["created_at"];
+						                    $response["user"]["updated_at"] = $user["updated_at"];
+						                    echo json_encode($response);
+					                	
+						                } else {
+						                    // user failed to store
+						                    $response["error"] = 1;
+						                    $response["error_msg"] = "Invalid Request";
+						                    echo json_encode($response);
+						                }
+			                		}
+		                	}
+		                }else{
+			                $user = $db->storeOtherUser($name, $email, $password, $type , $nic);
+			                if ($user) {
+			                	
+				                    // user stored successfully
+				                    $response["success"] = 1;
+				                    $response["uid"] = $user["nic"];
+				                    $response["user"]["name"] = $user["name"];
+				                    // $response["user"]["email"] = $user["email"];
+				                    $response["user"]["created_at"] = $user["created_at"];
+				                    $response["user"]["updated_at"] = $user["updated_at"];
+				                    echo json_encode($response);
+			                	
+			                } else {
+			                    // user failed to store
+			                    $response["error"] = 1;
+			                    $response["error_msg"] = "Invalid Request";
+			                    echo json_encode($response);
+			                }
+		            	}
 		            }
 		        }
 		        else {
@@ -145,7 +181,12 @@ if (isset($_POST['tag']) && $_POST['tag'] != '') {
 			}
 		    
         }
-	} else {
+	} else if($tag == 'report'){
+		//get the count of the array to get howmany images needed. 
+		// $length = sizeof($_POST);
+		// if()
+
+	}else{
 		echo "Invalid Request";
 	}
 } else {

@@ -23,7 +23,6 @@ class DB_Functions {
      * returns user details
      */
     public function storeUser($name, $mobile, $password,$nic,$type) {
-        $uuid = uniqid('', true);
         $hash = $this->hashSSHA($password);
         $encrypted_password = $hash["encrypted"]; // encrypted password
         $salt = $hash["salt"]; // salt
@@ -44,7 +43,6 @@ class DB_Functions {
      * returns user details
      */
     public function storeOtherUser($name, $email, $password,$type,$nic ) {
-        $uuid = uniqid('', true);
         $hash = $this->hashSSHA($password);
         $encrypted_password = $hash["encrypted"]; // encrypted password
         $salt = $hash["salt"]; // salt
@@ -52,6 +50,7 @@ class DB_Functions {
         if ($result) {
             // get user details 
             $result = mysql_query("SELECT * FROM users WHERE usr_nic = \"$nic\"");
+            echo "SELECT * FROM users WHERE usr_nic = \"$nic\"";
             // return user details
             return mysql_fetch_array($result);
         } else {
@@ -60,10 +59,26 @@ class DB_Functions {
     }
 
     /**
+     * Storing new user
+     * returns user details
+     */
+    public function storeDoctorData($regNo, $userId, $speciality,$location ) {
+        $result = mysql_query("INSERT INTO med_doctor(doc_reg_no, doc_usr_id, doc_speciality, doc_base_location) VALUES('$regNo','$userId','$speciality', '$location')");
+        if ($result) {
+            // get user details 
+            $result = mysql_query("SELECT * FROM `med_doctor` WHERE usr_nic = \"$nic\"");
+            // return user details
+            return mysql_fetch_array($result);
+        } else {
+            return false;
+        }
+    }
+    
+    /**
      * Get user by email and password
      */
     public function getUserByEmailAndPassword($email, $password) {
-        $result = mysql_query("SELECT * FROM users WHERE mobile = '$email'") or die(mysql_error());
+        $result = mysql_query("SELECT * FROM users WHERE mobile = \"$email\"") or die(mysql_error());
         // check for result 
         $no_of_rows = mysql_num_rows($result);
         if ($no_of_rows > 0) {
@@ -82,11 +97,25 @@ class DB_Functions {
         }
     }
 
+    public function isDoctorExisted_ViaMail($regNo,$userId){
+        $result = mysql_query("SELECT * FROM med_doctor WHERE   doc_usr_id = \"$userId\" AND  doc_reg_no = \"$regNo\"");
+        // check for result 
+        $no_of_rows = mysql_num_rows($result);
+        echo $no_of_rows;
+        if ($no_of_rows > 0) {
+            // user existed 
+            return true;
+        } else {
+            // user not existed
+            return false;
+        }
+    }
+
     /**
      * Check user is existed or not via mail
      */
     public function isUserExisted_ViaMail($nic) {
-        $result = mysql_query("SELECT usr_nic from users WHERE usr_nic = '$nic'");
+        $result = mysql_query("SELECT usr_nic from users WHERE usr_nic = \"$nic\"");
         $no_of_rows = mysql_num_rows($result);
         echo $no_of_rows;
         if ($no_of_rows > 0) {
@@ -102,7 +131,7 @@ class DB_Functions {
      * Check user is existed or not via sms
      */
     public function isUserExisted_ViaSMS($mobile) {
-        $result = mysql_query("SELECT usr_moblie from users WHERE usr_moblie = '$mobile'");
+        $result = mysql_query("SELECT usr_moblie from users WHERE usr_moblie = \"$mobile\"");
         $no_of_rows = mysql_num_rows($result);
         if ($no_of_rows > 0) {
             // user existed 
