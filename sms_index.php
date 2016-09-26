@@ -22,7 +22,11 @@ if (isset($_POST) and isset($_POST['file_upload'])) {
     $doctor_name = $_POST['doctor_name'];
     $patient_tel = $_POST['patient_tel'];
     $heading = $_POST['heading'];
-    $content = $_POST['content'];
+    $content = '';
+    if(isset($_POST['wbc']) && !empty($_POST['wbc']) && isset($_POST['rbc']) && !empty($_POST['rbc']) && isset($_POST['platelets']) && !empty($_POST['platelets'])){
+        $content .= 'wbc:'.$_POST['wbc'].'rbc:'.$_POST['rbc'].'platelets:'.$_POST['platelets'];
+    }
+
     //file_upload_vars
     $valid_formats = array("jpg","jpeg", "png", "gif", "zip", "bmp");
     $max_file_size = 1024 * 1000; //100 kb
@@ -49,7 +53,6 @@ if (isset($_POST) and isset($_POST['file_upload'])) {
                     $db->storeImages($report_id,$name,'');
                     if (move_uploaded_file($_FILES["files"]["tmp_name"][$f], $path . $name)){
                         $count++; // Number of successfully uploaded file
-                        header('Location: http://localhost:8080/LabUser/home.jsp');
                     }
                 }
             }
@@ -79,6 +82,7 @@ if (isset($_POST) and isset($_POST['file_upload'])) {
                 $binary_header = "";
                 sendSms($responseMsg, $destinationAddresses, $password, $applicationId, $sourceAddress, $deliveryStatusRequest, $charging_amount, $encoding, $version, $binary_header);
         }
+        header('Location: http://localhost:8080/LabUser/home.jsp');
 
     }
 }else if(isset($_POST) and isset($_POST['add_patient'])){

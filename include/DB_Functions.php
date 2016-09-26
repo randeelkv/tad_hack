@@ -26,7 +26,7 @@ class DB_Functions {
         //$hash = $this->hashSSHA($password);
         //$encrypted_password = $hash["encrypted"]; // encrypted password
         //$salt = $hash["salt"]; // salt
-        $result = mysql_query("INSERT INTO users( usr_name,usr_type,usr_nic, usr_mobile, usr_encrypted_password, usr_salt, usr_created_at) VALUES( '$name','$type','$nic', '$mobile', '$encrypted_password', '$salt', NOW())");
+        $result = mysql_query("INSERT INTO users( usr_name,usr_type,usr_nic, usr_mobile, usr_encrypted_password, usr_created_at) VALUES( '$name','$type','$nic', '$mobile', '$password', NOW())");
         // check for successful store
         if ($result) {
             // get user details 
@@ -46,7 +46,7 @@ class DB_Functions {
 //        $hash = $this->hashSSHA($password);
 //        $encrypted_password = $hash["encrypted"]; // encrypted password
 //        $salt = $hash["salt"]; // salt
-        $result = mysql_query("INSERT INTO users( usr_name,usr_type,usr_nic, usr_mobile, usr_email, usr_encrypted_password, usr_salt, usr_created_at) VALUES( '$name','$type','$nic', '$mobile','$email', '$encrypted_password', '$salt', NOW())");
+        $result = mysql_query("INSERT INTO users( usr_name,usr_type,usr_nic, usr_mobile, usr_email, usr_encrypted_password, usr_created_at) VALUES( '$name','$type','$nic', '$mobile','$email', '$password', NOW())");
         // check for successful store
         if ($result) {
             $user_id='';
@@ -75,7 +75,7 @@ class DB_Functions {
         //$hash = $this->hashSSHA($password);
         //$encrypted_password = $hash["encrypted"]; // encrypted password
         //$salt = $hash["salt"]; // salt
-		$result = mysql_query("INSERT INTO users(usr_name,usr_type,usr_nic, usr_email, usr_encrypted_password, usr_salt, usr_created_at) VALUES('$name','$type','$nic', '$email', '$encrypted_password', '$salt', NOW())");
+		$result = mysql_query("INSERT INTO users(usr_name,usr_type,usr_nic, usr_email, usr_encrypted_password, usr_created_at) VALUES('$name','$type','$nic', '$email', '$password', NOW())");
         if ($result) {
             // get user details 
             $result = mysql_query("SELECT * FROM users WHERE usr_nic = \"$nic\"");
