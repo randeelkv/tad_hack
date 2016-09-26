@@ -228,6 +228,55 @@ class DB_Functions {
 
         return $hash;
     }
+
+    /**
+     * Store images and report data
+     */
+    public function  storeReport($doctor_name,$user_tel,$heading,$content){
+        $doctor_id = '';
+        $patient_id = '';
+        $report_id = '';
+
+        //search doctor id
+        $query = "SELECT doc_usr_id FROM med_doctor d, users u WHERE d.doc_usr_id=u.usr_id and u.usr_name='$doctor_name'";
+        if ($query_run = mysql_query($query)) {
+            if (mysql_num_rows($query_run) != NULL) {
+                while ($row = mysql_fetch_assoc($query_run)) {
+                    $doctor_id = $row['doc_usr_id'];
+                }
+            }
+        }
+
+
+        //search patient id
+        $query = "SELECT usr_id FROM users WHERE usr_mobile='$user_tel'";
+        if ($query_run = mysql_query($query)) {
+            if (mysql_num_rows($query_run) != NULL) {
+                while ($row = mysql_fetch_assoc($query_run)) {
+                    $patient_id = $row['usr_id'];
+                }
+            }
+        }
+
+        $result = mysql_query("INSERT INTO med_report(rep_doctor,rep_user,rep_heading,rep_content,rep_status,rep_created_in) VALUES('$doctor_id','$patient_id','$heading','$content','waiting',now())");
+
+        //get last id
+        $query = "SELECT LAST_INSERT_ID() as report_id";
+        if ($query_run = mysql_query($query)) {
+            if (mysql_num_rows($query_run) != NULL) {
+                while ($row = mysql_fetch_assoc($query_run)) {
+                    $report_id = $row['report_id'];
+                }
+            }
+        }
+
+        return $report_id;
+
+    }
+
+    public function storeImages($scn_imagereport,$scn_image_name,$scn_image_description){
+        $result = mysql_query("INSERT INTO med_scanned(scn_imagereport,scn_image_name,scn_image_description) VALUES('$scn_imagereport','$scn_image_name','$scn_image_description')");
+    }
 }
 
 ?>
