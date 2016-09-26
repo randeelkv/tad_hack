@@ -60,6 +60,48 @@ if (isset($_POST) and isset($_POST['file_upload'])) {
     }
 
 
+}else if(isset($_POST) and isset($_POST['add_patient'])){
+    //data
+    $name = $_POST['username'];
+    $mobile = $_POST['mobile'];
+    $email = $_POST['email'];
+    $nic = $_POST['nic'];
+    $type = 'user';
+    $password = generateRandomString();
+
+    echo $email;
+
+    //new user store in db
+    $db = new DB_Functions();
+    $result = $db->storeUserWeb($name,$mobile,$email,$password,$nic,$type,'','','');
+    if($result){
+        header('Location: http://localhost:8080/LabUser/addpatient.jsp');
+    }
+}else if(isset($_POST) and isset($_POST['register'])){
+    //data
+    $name = $_POST['username'];
+    $mobile = $_POST['mobile'];
+    $email = $_POST['email'];
+    $nic = $_POST['nic'];
+    $type = $_POST['type'];
+    $password = $_POST['password'];
+    $speciality = '';
+    $base_location = '';
+    $reg_no = '';
+
+    //check whether doctor registraion
+    if($_POST['type']=='doctor'){
+        $speciality = $_POST['speciality'];
+        $base_location = $_POST['based_location'];
+        $reg_no = $_POST['reg_no'];
+    }
+
+    //new user store in db
+    $db = new DB_Functions();
+    $result = $db->storeUserWeb($name,$mobile,$email,$password,$nic,$type,$speciality,$base_location,$reg_no);
+    if($result){
+        header('Location: http://localhost:8080/index.jsp');
+    }
 }else{
     try {
 
@@ -154,6 +196,16 @@ function sendSms($responseMsg, $destinationAddresses, $password, $applicationId,
  function getReportNo($content)
 {
     # code...
+}
+
+function generateRandomString($length = 8) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
 }
 
 ?>
