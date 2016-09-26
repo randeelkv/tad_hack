@@ -43,9 +43,9 @@ class DB_Functions {
      * returns user details
      */
     public function storeUserWeb($name, $mobile,$email, $password,$nic,$type,$speciality,$base_location,$reg_no) {
-        $hash = $this->hashSSHA($password);
-        $encrypted_password = $hash["encrypted"]; // encrypted password
-        $salt = $hash["salt"]; // salt
+//        $hash = $this->hashSSHA($password);
+//        $encrypted_password = $hash["encrypted"]; // encrypted password
+//        $salt = $hash["salt"]; // salt
         $result = mysql_query("INSERT INTO users( usr_name,usr_type,usr_nic, usr_mobile, usr_email, usr_encrypted_password, usr_salt, usr_created_at) VALUES( '$name','$type','$nic', '$mobile','$email', '$encrypted_password', '$salt', NOW())");
         // check for successful store
         if ($result) {
