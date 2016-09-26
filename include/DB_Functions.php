@@ -39,10 +39,39 @@ class DB_Functions {
     }
 
     /**
+     * Storing new user by lab assistant
+     * returns user details
+     */
+    public function storeUserWeb($name, $mobile,$email, $password,$nic,$type,$speciality,$base_location,$reg_no) {
+        $hash = $this->hashSSHA($password);
+        $encrypted_password = $hash["encrypted"]; // encrypted password
+        $salt = $hash["salt"]; // salt
+        $result = mysql_query("INSERT INTO users( usr_name,usr_type,usr_nic, usr_mobile, usr_email, usr_encrypted_password, usr_salt, usr_created_at) VALUES( '$name','$type','$nic', '$mobile','$email', '$encrypted_password', '$salt', NOW())");
+        // check for successful store
+        if ($result) {
+            $user_id='';
+            $query = "SELECT LAST_INSERT_ID() as usr_id";
+            if ($query_run = mysql_query($query)) {
+                if (mysql_num_rows($query_run) != NULL) {
+                    while ($row = mysql_fetch_assoc($query_run)) {
+                        $user_id = $row['usr_id'];
+                    }
+                }
+            }
+            if($type=='doctor'){
+                $result = mysql_query("INSERT INTO med_doctor(doc_reg_no,doc_usr_id,doc_speciality,doc_base_location) VALUES( '$reg_no','$user_id','$speciality', '$base_location')");
+            }
+            return $result;
+        } else {
+            return false;
+        }
+    }
+
+    /**
      * Storing new user
      * returns user details
      */
-    public function storeOtherUser($name, $email, $password,$type,$nic ) {
+    public function storeOtherUser($name, $email, $password,$type,$nic) {
         $hash = $this->hashSSHA($password);
         $encrypted_password = $hash["encrypted"]; // encrypted password
         $salt = $hash["salt"]; // salt
