@@ -26,7 +26,8 @@ class DB_Functions {
         //$hash = $this->hashSSHA($password);
         //$encrypted_password = $hash["encrypted"]; // encrypted password
         //$salt = $hash["salt"]; // salt
-        $result = mysql_query("INSERT INTO users( usr_name,usr_type,usr_nic, usr_mobile, usr_encrypted_password, usr_created_at) VALUES( '$name','$type','$nic', '$mobile', '$password', NOW())");
+
+        $result = mysql_query("INSERT INTO users(usr_email,usr_type,usr_nic, usr_mobile, usr_encrypted_password, usr_created_at) VALUES( '$name','$type','$nic', '$mobile', '$password', NOW())");
         // check for successful store
         if ($result) {
             // get user details 
@@ -189,11 +190,26 @@ class DB_Functions {
     /**
      * Check user is existed or not via mail
      */
+    public function isUserExisted_ViaMail($mail) {
+        $result = mysql_query("SELECT usr_id , usr_email from users WHERE usr_email = \"$mail\"");
+        $no_of_rows = mysql_num_rows($result);
+        if ($no_of_rows > 0) {
+            // user existed 
+            return true;
+        } else {
+            // user not existed
+            return false;
+        }
+    }
+
+    /**
+     * Check user is existed or not via mail
+     */
     public function isUserExisted_ViaNIC($nic) {
         $result = mysql_query("SELECT usr_id , usr_nic from users WHERE usr_nic = \"$nic\"");
         $no_of_rows = mysql_num_rows($result);
         if ($no_of_rows > 0) {
-            // user existed 
+            // user existed
             return true;
         } else {
             // user not existed
@@ -305,6 +321,13 @@ class DB_Functions {
 
     public function storeImages($scn_imagereport,$scn_image_name,$scn_image_description){
         $result = mysql_query("INSERT INTO med_scanned(scn_imagereport,scn_image_name,scn_image_description) VALUES('$scn_imagereport','$scn_image_name','$scn_image_description')");
+    }
+
+    /**
+     *
+     */
+    function checkTrends($city){
+        $query="SELECT rep_content FROM tad_med.med_report r, users u WHERE u.usr_id=r.rep_user AND u.usr_location='GALLE'"
     }
 }
 

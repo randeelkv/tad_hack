@@ -22,3 +22,13 @@
 [ content=reg test pass 900123124, address=tel:94771122336, requestId=1474777716966, applicationId=APP_000001, encoding=0, version=1.0 ]
 [ content=reg test pass 900123124, address=tel:94771122336, requestId=1474777732977, applicationId=APP_000001, encoding=0, version=1.0 ]
 [ content=reg test pass 900123124, address=tel:94771122336, requestId=1474777758989, applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=REG dimuthuk 1234 920932029v
+, address=tel:94771122336, requestId=1474930076596, applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=REG dimuthuk 1234 920932029v
+, address=tel:94771122336, requestId=1474930373940, applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=REG dimuthuk@gmail.com 1234 920932029
+, address=tel:94771122336, requestId=1474930592996, applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=REG dimuthuk@gmail.com 1234 920932029
+, address=tel:94771122336, requestId=1474930775643, applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=REG dimuthuk@gmail.com 1234 920932029
+, address=tel:94771122336, requestId=1474930838268, applicationId=APP_000001, encoding=0, version=1.0 ]
