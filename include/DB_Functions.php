@@ -324,10 +324,22 @@ class DB_Functions {
     }
 
     /**
-     *
+     * return content of lab reports for analysing trends
      */
-    function checkTrends($city){
-        $query="SELECT rep_content FROM tad_med.med_report r, users u WHERE u.usr_id=r.rep_user AND u.usr_location='GALLE'"
+    function getReportContent($city){
+        $content = [];
+        $query="SELECT rep_content FROM tad_med.med_report r, users u WHERE u.usr_id=r.rep_user AND u.usr_location='$city' and r.rep_heading = 'FBC'";
+        if ($query_run = mysql_query($query)) {
+            if (mysql_num_rows($query_run) != NULL) {
+                while ($row = mysql_fetch_assoc($query_run)) {
+                    $row_content = $row['rep_content'];
+                    if($row_content!=''){
+                        $content[] = $row_content;
+                    }
+                }
+            }
+        }
+        return $content;
     }
 }
 
