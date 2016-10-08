@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21bc039e-0ce4-47f4-bc92-60db4095cb00" name="Default" comment="">
+    <list default="true" id="21bc039e-0ce4-47f4-bc92-60db4095cb00" name="Default" comment="Doctor Signup added">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/config.php" afterPath="$PROJECT_DIR$/include/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/DB_Functions.php" afterPath="$PROJECT_DIR$/include/DB_Functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log.txt" afterPath="$PROJECT_DIR$/log.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sms-app-error.log" afterPath="$PROJECT_DIR$/sms-app-error.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sms_index.php" afterPath="$PROJECT_DIR$/sms_index.php" />
     </list>
     <ignored path="tad_hack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +30,8 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+            <state relative-caret-position="136">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -48,37 +50,58 @@
       <file leaf-file-name="test_webservice.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_webservice.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-83">
+            <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sms_index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sms_index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sms_index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="84" column="25" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="416">
+              <caret line="196" column="18" selection-start-line="196" selection-start-column="18" selection-end-line="196" selection-end-column="18" />
+              <folding>
+                <element signature="e#6#422#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DB_Functions.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DB_Functions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/include/DB_Functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+            <state relative-caret-position="447">
+              <caret line="329" column="122" selection-start-line="329" selection-start-column="122" selection-end-line="329" selection-end-column="122" />
               <folding>
-                <marker date="1474919939976" expanded="true" signature="27:11210" ph="..." />
-                <marker date="1474919939976" expanded="true" signature="467:476" ph="..." />
-                <marker date="1474919939976" expanded="true" signature="7733:7824" ph="..." />
-                <marker date="1474919939976" expanded="true" signature="8447:8506" ph="SELECT usr_m... users" />
-                <marker date="1474919939976" expanded="true" signature="9629:9731" ph="SELECT doc_u... med_doctor" />
-                <marker date="1474919939976" expanded="true" signature="10042:10095" ph="SELECT usr_i... users" />
-                <marker date="1474919939976" expanded="true" signature="10387:10553" ph="INSERT INTO med_report... " />
-                <marker date="1474919939976" expanded="true" signature="11053:11200" ph="INSERT INTO med_scanned... " />
+                <marker date="1475928134326" expanded="true" signature="661:821" ph="INSERT INTO users... " />
+                <marker date="1475928134326" expanded="true" signature="954:998" ph="SELECT * FRO... users" />
+                <marker date="1475928134326" expanded="true" signature="1536:1716" ph="INSERT INTO users... " />
+                <marker date="1475928134326" expanded="true" signature="2218:2358" ph="INSERT INTO med_doctor... " />
+                <marker date="1475928134326" expanded="true" signature="2793:2949" ph="INSERT INTO users... " />
+                <marker date="1475928134326" expanded="true" signature="3044:3088" ph="SELECT * FRO... users" />
+                <marker date="1475928134326" expanded="true" signature="3110:3154" ph="SELECT * FRO... users" />
+                <marker date="1475928134326" expanded="true" signature="3477:3612" ph="INSERT INTO med_doctor... " />
+                <marker date="1475928134326" expanded="true" signature="3707:3758" ph="SELECT * FRO... med_doctor" />
+                <marker date="1475928134326" expanded="true" signature="4092:4261" ph="INSERT INTO med_report... " />
+                <marker date="1475928134326" expanded="true" signature="4355:4497" ph="SELECT * FRO... med_report" />
+                <marker date="1475928134326" expanded="true" signature="4519:4661" ph="SELECT * FRO... med_report" />
+                <marker date="1475928134326" expanded="true" signature="4979:5079" ph="INSERT INTO `med_scanned`... " />
+                <marker date="1475928134326" expanded="true" signature="5173:5241" ph="SELECT * FRO... med_scanned" />
+                <marker date="1475928134326" expanded="true" signature="5572:5755" ph="INSERT INTO `med_report`... " />
+                <marker date="1475928134326" expanded="true" signature="5849:5900" ph="SELECT * FRO... med_doctor" />
+                <marker date="1475928134326" expanded="true" signature="6197:6245" ph="SELECT * FRO... users" />
+                <marker date="1475928134326" expanded="true" signature="6976:7062" ph="SELECT * FRO... med_doctor" />
+                <marker date="1475928134326" expanded="true" signature="7462:7526" ph="SELECT usr_i... users" />
+                <marker date="1475928134326" expanded="true" signature="7895:7954" ph="SELECT usr_i... users" />
+                <marker date="1475928134326" expanded="true" signature="8319:8378" ph="SELECT usr_i... users" />
+                <marker date="1475928134326" expanded="true" signature="8801:8860" ph="SELECT usr_m... users" />
+                <marker date="1475928134326" expanded="true" signature="9983:10085" ph="SELECT doc_u... med_doctor" />
+                <marker date="1475928134326" expanded="true" signature="10396:10449" ph="SELECT usr_i... users" />
+                <marker date="1475928134326" expanded="true" signature="10741:10907" ph="INSERT INTO med_report... " />
+                <marker date="1475928134326" expanded="true" signature="11407:11554" ph="INSERT INTO med_scanned... " />
+                <marker date="1475928134326" expanded="true" signature="11637:11743" ph="SELECT rep_c... med_report" />
               </folding>
             </state>
           </provider>
@@ -100,7 +123,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="analysing" />
       </map>
     </option>
   </component>
@@ -113,6 +136,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/include/config.php" />
+        <option value="$PROJECT_DIR$/newfile.txt" />
+        <option value="$PROJECT_DIR$/sms-app-error.log" />
         <option value="$PROJECT_DIR$/sms_index.php" />
         <option value="$PROJECT_DIR$/include/DB_Functions.php" />
       </list>
@@ -208,203 +233,26 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Medical-Portal" />
     <property name="aspect.path.notification.shown" value="true" />
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/include/DB_Functions.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sms_index.php</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
       <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
       <method />
     </configuration>
   </component>
@@ -427,6 +275,7 @@
       <workItem from="1474902229157" duration="18000" />
       <workItem from="1474902265698" duration="5728000" />
       <workItem from="1474909968297" duration="5000" />
+      <workItem from="1475906045315" duration="31000" />
     </task>
     <task id="LOCAL-00001" summary="Report upload was added. Need to implement SMS feature">
       <created>1474912559544</created>
@@ -442,11 +291,39 @@
       <option name="project" value="LOCAL" />
       <updated>1474919478404</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Doctor Signup added">
+      <created>1474919993699</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1474919993699</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Doctor Signup added">
+      <created>1474921969570</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1474921969570</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Analysing done">
+      <created>1474928075541</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1474928075541</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Doctor Signup added">
+      <created>1474929462330</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1474929462330</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15258000" />
+    <option name="totallyTimeSpent" value="27652000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
@@ -458,13 +335,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11198738" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17946824" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17872968" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -473,9 +351,9 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -491,6 +369,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Report upload was added. Need to implement SMS feature" />
+    <MESSAGE value="Analysing done" />
     <MESSAGE value="Doctor Signup added" />
     <option name="LAST_COMMIT_MESSAGE" value="Doctor Signup added" />
   </component>
@@ -499,6 +378,162 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/include/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_webservice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sms_index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#422#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/DB_Functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+          <folding>
+            <marker date="1475928134326" expanded="true" signature="661:821" ph="INSERT INTO users... " />
+            <marker date="1475928134326" expanded="true" signature="954:998" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="1536:1716" ph="INSERT INTO users... " />
+            <marker date="1475928134326" expanded="true" signature="2218:2358" ph="INSERT INTO med_doctor... " />
+            <marker date="1475928134326" expanded="true" signature="2793:2949" ph="INSERT INTO users... " />
+            <marker date="1475928134326" expanded="true" signature="3044:3088" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="3110:3154" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="3477:3612" ph="INSERT INTO med_doctor... " />
+            <marker date="1475928134326" expanded="true" signature="3707:3758" ph="SELECT * FRO... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="4092:4261" ph="INSERT INTO med_report... " />
+            <marker date="1475928134326" expanded="true" signature="4355:4497" ph="SELECT * FRO... med_report" />
+            <marker date="1475928134326" expanded="true" signature="4519:4661" ph="SELECT * FRO... med_report" />
+            <marker date="1475928134326" expanded="true" signature="4979:5079" ph="INSERT INTO `med_scanned`... " />
+            <marker date="1475928134326" expanded="true" signature="5173:5241" ph="SELECT * FRO... med_scanned" />
+            <marker date="1475928134326" expanded="true" signature="5572:5755" ph="INSERT INTO `med_report`... " />
+            <marker date="1475928134326" expanded="true" signature="5849:5900" ph="SELECT * FRO... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="6197:6245" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="6976:7062" ph="SELECT * FRO... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="7462:7526" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="7895:7954" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="8319:8378" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="8801:8860" ph="SELECT usr_m... users" />
+            <marker date="1475928134326" expanded="true" signature="9983:10085" ph="SELECT doc_u... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="10396:10449" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="10741:10907" ph="INSERT INTO med_report... " />
+            <marker date="1475928134326" expanded="true" signature="11407:11554" ph="INSERT INTO med_scanned... " />
+            <marker date="1475928134326" expanded="true" signature="11637:11743" ph="SELECT rep_c... med_report" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/DB_Connect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_webservice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sms_index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#422#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/DB_Functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding>
+            <marker date="1475928134326" expanded="true" signature="661:821" ph="INSERT INTO users... " />
+            <marker date="1475928134326" expanded="true" signature="954:998" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="1536:1716" ph="INSERT INTO users... " />
+            <marker date="1475928134326" expanded="true" signature="2218:2358" ph="INSERT INTO med_doctor... " />
+            <marker date="1475928134326" expanded="true" signature="2793:2949" ph="INSERT INTO users... " />
+            <marker date="1475928134326" expanded="true" signature="3044:3088" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="3110:3154" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="3477:3612" ph="INSERT INTO med_doctor... " />
+            <marker date="1475928134326" expanded="true" signature="3707:3758" ph="SELECT * FRO... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="4092:4261" ph="INSERT INTO med_report... " />
+            <marker date="1475928134326" expanded="true" signature="4355:4497" ph="SELECT * FRO... med_report" />
+            <marker date="1475928134326" expanded="true" signature="4519:4661" ph="SELECT * FRO... med_report" />
+            <marker date="1475928134326" expanded="true" signature="4979:5079" ph="INSERT INTO `med_scanned`... " />
+            <marker date="1475928134326" expanded="true" signature="5173:5241" ph="SELECT * FRO... med_scanned" />
+            <marker date="1475928134326" expanded="true" signature="5572:5755" ph="INSERT INTO `med_report`... " />
+            <marker date="1475928134326" expanded="true" signature="5849:5900" ph="SELECT * FRO... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="6197:6245" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="6976:7062" ph="SELECT * FRO... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="7462:7526" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="7895:7954" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="8319:8378" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="8801:8860" ph="SELECT usr_m... users" />
+            <marker date="1475928134326" expanded="true" signature="9983:10085" ph="SELECT doc_u... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="10396:10449" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="10741:10907" ph="INSERT INTO med_report... " />
+            <marker date="1475928134326" expanded="true" signature="11407:11554" ph="INSERT INTO med_scanned... " />
+            <marker date="1475928134326" expanded="true" signature="11637:11743" ph="SELECT rep_c... med_report" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/DB_Connect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/include/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -607,7 +642,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
-          <folding />
+          <folding>
+            <element signature="e#6#422#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -616,14 +653,33 @@
         <state relative-caret-position="482">
           <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
           <folding>
-            <marker date="1474919939976" expanded="true" signature="27:11210" ph="..." />
-            <marker date="1474919939976" expanded="true" signature="467:476" ph="..." />
-            <marker date="1474919939976" expanded="true" signature="7733:7824" ph="..." />
-            <marker date="1474919939976" expanded="true" signature="8447:8506" ph="SELECT usr_m... users" />
-            <marker date="1474919939976" expanded="true" signature="9629:9731" ph="SELECT doc_u... med_doctor" />
-            <marker date="1474919939976" expanded="true" signature="10042:10095" ph="SELECT usr_i... users" />
-            <marker date="1474919939976" expanded="true" signature="10387:10553" ph="INSERT INTO med_report... " />
-            <marker date="1474919939976" expanded="true" signature="11053:11200" ph="INSERT INTO med_scanned... " />
+            <marker date="1475928134326" expanded="true" signature="661:821" ph="INSERT INTO users... " />
+            <marker date="1475928134326" expanded="true" signature="954:998" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="1536:1716" ph="INSERT INTO users... " />
+            <marker date="1475928134326" expanded="true" signature="2218:2358" ph="INSERT INTO med_doctor... " />
+            <marker date="1475928134326" expanded="true" signature="2793:2949" ph="INSERT INTO users... " />
+            <marker date="1475928134326" expanded="true" signature="3044:3088" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="3110:3154" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="3477:3612" ph="INSERT INTO med_doctor... " />
+            <marker date="1475928134326" expanded="true" signature="3707:3758" ph="SELECT * FRO... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="4092:4261" ph="INSERT INTO med_report... " />
+            <marker date="1475928134326" expanded="true" signature="4355:4497" ph="SELECT * FRO... med_report" />
+            <marker date="1475928134326" expanded="true" signature="4519:4661" ph="SELECT * FRO... med_report" />
+            <marker date="1475928134326" expanded="true" signature="4979:5079" ph="INSERT INTO `med_scanned`... " />
+            <marker date="1475928134326" expanded="true" signature="5173:5241" ph="SELECT * FRO... med_scanned" />
+            <marker date="1475928134326" expanded="true" signature="5572:5755" ph="INSERT INTO `med_report`... " />
+            <marker date="1475928134326" expanded="true" signature="5849:5900" ph="SELECT * FRO... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="6197:6245" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="6976:7062" ph="SELECT * FRO... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="7462:7526" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="7895:7954" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="8319:8378" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="8801:8860" ph="SELECT usr_m... users" />
+            <marker date="1475928134326" expanded="true" signature="9983:10085" ph="SELECT doc_u... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="10396:10449" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="10741:10907" ph="INSERT INTO med_report... " />
+            <marker date="1475928134326" expanded="true" signature="11407:11554" ph="INSERT INTO med_scanned... " />
+            <marker date="1475928134326" expanded="true" signature="11637:11743" ph="SELECT rep_c... med_report" />
           </folding>
         </state>
       </provider>
@@ -656,7 +712,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
-          <folding />
+          <folding>
+            <element signature="e#6#422#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -665,14 +723,33 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1474919939976" expanded="true" signature="27:11210" ph="..." />
-            <marker date="1474919939976" expanded="true" signature="467:476" ph="..." />
-            <marker date="1474919939976" expanded="true" signature="7733:7824" ph="..." />
-            <marker date="1474919939976" expanded="true" signature="8447:8506" ph="SELECT usr_m... users" />
-            <marker date="1474919939976" expanded="true" signature="9629:9731" ph="SELECT doc_u... med_doctor" />
-            <marker date="1474919939976" expanded="true" signature="10042:10095" ph="SELECT usr_i... users" />
-            <marker date="1474919939976" expanded="true" signature="10387:10553" ph="INSERT INTO med_report... " />
-            <marker date="1474919939976" expanded="true" signature="11053:11200" ph="INSERT INTO med_scanned... " />
+            <marker date="1475928134326" expanded="true" signature="661:821" ph="INSERT INTO users... " />
+            <marker date="1475928134326" expanded="true" signature="954:998" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="1536:1716" ph="INSERT INTO users... " />
+            <marker date="1475928134326" expanded="true" signature="2218:2358" ph="INSERT INTO med_doctor... " />
+            <marker date="1475928134326" expanded="true" signature="2793:2949" ph="INSERT INTO users... " />
+            <marker date="1475928134326" expanded="true" signature="3044:3088" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="3110:3154" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="3477:3612" ph="INSERT INTO med_doctor... " />
+            <marker date="1475928134326" expanded="true" signature="3707:3758" ph="SELECT * FRO... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="4092:4261" ph="INSERT INTO med_report... " />
+            <marker date="1475928134326" expanded="true" signature="4355:4497" ph="SELECT * FRO... med_report" />
+            <marker date="1475928134326" expanded="true" signature="4519:4661" ph="SELECT * FRO... med_report" />
+            <marker date="1475928134326" expanded="true" signature="4979:5079" ph="INSERT INTO `med_scanned`... " />
+            <marker date="1475928134326" expanded="true" signature="5173:5241" ph="SELECT * FRO... med_scanned" />
+            <marker date="1475928134326" expanded="true" signature="5572:5755" ph="INSERT INTO `med_report`... " />
+            <marker date="1475928134326" expanded="true" signature="5849:5900" ph="SELECT * FRO... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="6197:6245" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="6976:7062" ph="SELECT * FRO... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="7462:7526" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="7895:7954" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="8319:8378" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="8801:8860" ph="SELECT usr_m... users" />
+            <marker date="1475928134326" expanded="true" signature="9983:10085" ph="SELECT doc_u... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="10396:10449" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="10741:10907" ph="INSERT INTO med_report... " />
+            <marker date="1475928134326" expanded="true" signature="11407:11554" ph="INSERT INTO med_scanned... " />
+            <marker date="1475928134326" expanded="true" signature="11637:11743" ph="SELECT rep_c... med_report" />
           </folding>
         </state>
       </provider>
@@ -757,22 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/DB_Connect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -783,34 +844,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_webservice.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-83">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/DB_Functions.php">
+    <entry file="file://$PROJECT_DIR$/include/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding>
-            <marker date="1474919939976" expanded="true" signature="27:11210" ph="..." />
-            <marker date="1474919939976" expanded="true" signature="467:476" ph="..." />
-            <marker date="1474919939976" expanded="true" signature="7733:7824" ph="..." />
-            <marker date="1474919939976" expanded="true" signature="8447:8506" ph="SELECT usr_m... users" />
-            <marker date="1474919939976" expanded="true" signature="9629:9731" ph="SELECT doc_u... med_doctor" />
-            <marker date="1474919939976" expanded="true" signature="10042:10095" ph="SELECT usr_i... users" />
-            <marker date="1474919939976" expanded="true" signature="10387:10553" ph="INSERT INTO med_report... " />
-            <marker date="1474919939976" expanded="true" signature="11053:11200" ph="INSERT INTO med_scanned... " />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sms-app-error.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newfile.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sms_index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="84" column="25" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
-          <folding />
+        <state relative-caret-position="416">
+          <caret line="196" column="18" selection-start-line="196" selection-start-column="18" selection-end-line="196" selection-end-column="18" />
+          <folding>
+            <element signature="e#6#422#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/DB_Functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="329" column="122" selection-start-line="329" selection-start-column="122" selection-end-line="329" selection-end-column="122" />
+          <folding>
+            <marker date="1475928134326" expanded="true" signature="661:821" ph="INSERT INTO users... " />
+            <marker date="1475928134326" expanded="true" signature="954:998" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="1536:1716" ph="INSERT INTO users... " />
+            <marker date="1475928134326" expanded="true" signature="2218:2358" ph="INSERT INTO med_doctor... " />
+            <marker date="1475928134326" expanded="true" signature="2793:2949" ph="INSERT INTO users... " />
+            <marker date="1475928134326" expanded="true" signature="3044:3088" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="3110:3154" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="3477:3612" ph="INSERT INTO med_doctor... " />
+            <marker date="1475928134326" expanded="true" signature="3707:3758" ph="SELECT * FRO... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="4092:4261" ph="INSERT INTO med_report... " />
+            <marker date="1475928134326" expanded="true" signature="4355:4497" ph="SELECT * FRO... med_report" />
+            <marker date="1475928134326" expanded="true" signature="4519:4661" ph="SELECT * FRO... med_report" />
+            <marker date="1475928134326" expanded="true" signature="4979:5079" ph="INSERT INTO `med_scanned`... " />
+            <marker date="1475928134326" expanded="true" signature="5173:5241" ph="SELECT * FRO... med_scanned" />
+            <marker date="1475928134326" expanded="true" signature="5572:5755" ph="INSERT INTO `med_report`... " />
+            <marker date="1475928134326" expanded="true" signature="5849:5900" ph="SELECT * FRO... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="6197:6245" ph="SELECT * FRO... users" />
+            <marker date="1475928134326" expanded="true" signature="6976:7062" ph="SELECT * FRO... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="7462:7526" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="7895:7954" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="8319:8378" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="8801:8860" ph="SELECT usr_m... users" />
+            <marker date="1475928134326" expanded="true" signature="9983:10085" ph="SELECT doc_u... med_doctor" />
+            <marker date="1475928134326" expanded="true" signature="10396:10449" ph="SELECT usr_i... users" />
+            <marker date="1475928134326" expanded="true" signature="10741:10907" ph="INSERT INTO med_report... " />
+            <marker date="1475928134326" expanded="true" signature="11407:11554" ph="INSERT INTO med_scanned... " />
+            <marker date="1475928134326" expanded="true" signature="11637:11743" ph="SELECT rep_c... med_report" />
+          </folding>
         </state>
       </provider>
     </entry>
