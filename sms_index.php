@@ -26,7 +26,8 @@ if (isset($_POST) and isset($_POST['file_upload'])) {
     $heading = $_POST['heading'];
     $content = '';
     if (isset($_POST['wbc']) && !empty($_POST['wbc']) && isset($_POST['rbc']) &&
-        !empty($_POST['rbc']) && isset($_POST['platelets']) && !empty($_POST['platelets'])) {
+        !empty($_POST['rbc']) && isset($_POST['platelets']) && !empty($_POST['platelets'])
+    ) {
         $content .= 'wbc:' . $_POST['wbc'] . 'rbc:' . $_POST['rbc'] . 'platelets:' . $_POST['platelets'];
     }
 
@@ -73,7 +74,8 @@ if (isset($_POST) and isset($_POST['file_upload'])) {
                 break;
             case 'blood':
                 if (($_POST['wbc'] < 11000 || $_POST['wbc'] > 4500) || ($_POST['rbc'] < 6.1 || $_POST['rbc'] > 4.7)
-                    || ($_POST['platelets'] < 450000 || $_POST['platelets'] > 150000)) {
+                    || ($_POST['platelets'] < 450000 || $_POST['platelets'] > 150000)
+                ) {
                     $responseMsg = "Your Report is ready, To access in web payto report id:" . $report_id;
                 } else {
                     $responseMsg = "your Report is not good,Please Consult a doctor.To access in web payto report id:" . $report_id;
@@ -194,7 +196,82 @@ if (isset($_POST) and isset($_POST['file_upload'])) {
             $responseMsg = "this is the getspace";
         } elseif ($split[0] == 'trend') {
             //TODO: LBS integration
-            $lat =
+
+            $trends=[];
+            $lat = 6.051297;
+            $lan = 80.208906;
+            $city = '';
+
+            //Send request and receive json data by address
+            $geocodeFromLatLong = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?latlng=' . trim($lat) . ',' . trim($lan) . '&sensor=false&key=AIzaSyAg0p1PaRCdTffQ2TfjM094OYkPkyXukz0');
+            $output = json_decode($geocodeFromLatLong);
+            $status = $output->status;
+            //Get city from json data
+            if($status=="OK"){
+                $address_components = $output->results[1]->address_components;
+                foreach ($address_components as $component){
+                    $types = $component->types;
+                    if($types[0]=="administrative_area_level_2"){
+                        $city = $component->long_name;
+                        break;
+                    }
+                }
+            }
+
+            //retrieve contents from db table
+            $city = strtoupper($city);
+            $contents = $db->getReportContent($city);
+            $dengue = 0;$bacterial_viral_infection=0;$parasitic_allergic=0;
+
+            foreach ($contents as $content){
+                //split content into fields
+                $data = explode(",", $content);
+
+                $abnormals = ['Haemoglobin'=>'Normal','WBC'=>'Normal','Platelets'=>'Normal','Eosinophils'=>'Normal','Lymphocytes'=>'Normal'];
+
+                //searching for abnormal data of the fields
+                foreach($data as $field){
+                    $key_value_pair = explode(":",$field);
+                    switch($key_value_pair[0]){
+                        case 'Haemoglobin':
+                            ($key_value_pair[1]>180)?$abnormals['Haemoglobin'] = 'High':'';
+                            ($key_value_pair[1]<135)?$abnormals['Haemoglobin']= 'Low':'';
+                            break;
+                        case 'WBC':
+                            ($key_value_pair[1]>11.00)?$abnormals['WBC']= 'High':'';
+                            ($key_value_pair[1]<4.00)?$abnormals['WBC']= 'Low':'';
+                            break;
+                        case 'Platelets':
+                            ($key_value_pair[1]>400)?$abnormals['Platelets'] = 'High':'';
+                            ($key_value_pair[1]<150)?$abnormals['Platelets'] = 'Low':'';
+                            break;
+                        case 'Eosinophils':
+                            ($key_value_pair[1]>0.4)?$abnormals['Eosinophils'] = 'High':'';
+                            ($key_value_pair[1]<0.04)?$abnormals['Eosinophils'] = 'Low':'';
+                            break;
+                        case 'Lymphocytes':
+                            ($key_value_pair[1]>4.5)?$abnormals['Lymphocytes'] = 'High':'';
+                            ($key_value_pair[1]<1.0)?$abnormals['Lymphocytes'] = 'Low':'';
+                            break;
+                    }
+                }
+
+                if($abnormals['WBC']=='Low' && $abnormals['Platelets']=='Low'){
+                    $dengue++;
+                }else if($abnormals['Lymphocytes']=='High'){
+                    $bacterial_viral_infection++;
+                }else if($abnormals['Eosinophils']=='High'){
+                    $parasitic_allergic++;
+                }
+            }
+
+            //calculate percentage
+            $dengue_percentage = round(($dengue/count($contents))*100,2);
+            $bacterial_viral_infection_percentage = round(($bacterial_viral_infection/count($contents))*100,2);
+            $parasitic_allergic_percentage = round(($parasitic_allergic/count($contents))*100,2);
+
+            $responseMsg = 'Dengue: '.$dengue_percentage.'%, '.'Bacterial or Viral infections: '.$bacterial_viral_infection_percentage.'%, '.'Parasitic Allergic: '.$parasitic_allergic_percentage.'%';
+
         }
 
         //$responseMsg = bmiLogicHere($split);
