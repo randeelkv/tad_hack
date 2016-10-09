@@ -1,34 +1,22 @@
-[ content=reg sms, address=tel:94771122336, requestId=1474764005506, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=get space, address=tel:94771122336, requestId=1474764039924, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123123, address=tel:94771122336, requestId=1474775917796, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=get test pass 900123123, address=tel:94771122336, requestId=1474775944055, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=get test pass 900123123, address=tel:94771122336, requestId=1474775973409, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123123, address=tel:94771122336, requestId=1474776125092, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123123, address=tel:94771122336, requestId=1474776139735, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123123, address=tel:94771122336, requestId=1474776282816, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123123, address=tel:94771122336, requestId=1474776305883, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123123, address=tel:94771122336, requestId=1474776357039, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123123, address=tel:94771122336, requestId=1474776385450, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123123, address=tel:94771122336, requestId=1474776452203, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123123, address=tel:94771122336, requestId=1474776471272, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123123, address=tel:94771122336, requestId=1474776688550, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123123, address=tel:94771122336, requestId=1474776710897, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123123, address=tel:94771122336, requestId=1474776816410, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123123, address=tel:94771122336, requestId=1474776990833, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123123, address=tel:94771122336, requestId=1474777163431, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123123, address=tel:94771122336, requestId=1474777203183, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123124, address=tel:94771122336, requestId=1474777389114, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123124, address=tel:94771122336, requestId=1474777564502, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123124, address=tel:94771122336, requestId=1474777716966, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123124, address=tel:94771122336, requestId=1474777732977, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=reg test pass 900123124, address=tel:94771122336, requestId=1474777758989, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=REG dimuthuk 1234 920932029v
-, address=tel:94771122336, requestId=1474930076596, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=REG dimuthuk 1234 920932029v
-, address=tel:94771122336, requestId=1474930373940, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=REG dimuthuk@gmail.com 1234 920932029
-, address=tel:94771122336, requestId=1474930592996, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=REG dimuthuk@gmail.com 1234 920932029
-, address=tel:94771122336, requestId=1474930775643, applicationId=APP_000001, encoding=0, version=1.0 ]
-[ content=REG dimuthuk@gmail.com 1234 920932029
-, address=tel:94771122336, requestId=1474930838268, applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=reg, address=tel:94771122336, requestId=1476019291921,
+         applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=reg, address=tel:94771122336, requestId=1476020130630,
+         applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=pay, address=tel:94771122336, requestId=1476020138740,
+         applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=pay, address=tel:94771122336, requestId=1476020250048,
+         applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=pay 10, address=tel:94771122336, requestId=1476020292477,
+         applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=pay 10, address=tel:94771122336, requestId=1476020611680,
+         applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=pay 10, address=tel:94771122336, requestId=1476020639345,
+         applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=pay 10, address=tel:94771122336, requestId=1476020680184,
+         applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=pay 10, address=tel:94771122336, requestId=1476020930599,
+         applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=pay 10, address=tel:94771122336, requestId=1476021114183,
+         applicationId=APP_000001, encoding=0, version=1.0 ]
+[ content=pay 10, address=tel:94771122336, requestId=1476021149422,
+         applicationId=APP_000001, encoding=0, version=1.0 ]

@@ -15,6 +15,7 @@ include_once 'include/libs/sms/SmsReceiver.php';
 include_once 'include/libs/sms/SmsSender.php';
 include_once 'include/log.php';
 require_once 'include/DB_Functions.php';
+include_once 'include/TAP-conf.php';
 ini_set('error_log', 'sms-app-error.log');
 
 //check whether it is a file upload
@@ -82,13 +83,13 @@ if (isset($_POST) and isset($_POST['file_upload'])) {
                 }
                 break;
                 $receiver = array('0' => $tel[1]);
-                $applicationId = "APP_000001";
-                $encoding = "0";
-                $version = "1.0";
-                $password = "password";
-                $sourceAddress = "77001";
-                $deliveryStatusRequest = "1";
-                $charging_amount = ":15.75";
+                $applicationId = $APP_ID;
+                $encoding = $ENCORRD;
+                $version = $VERSION;
+                $password = $PASSWORD;
+                $sourceAddress = $SOURSE_ADDRESS;
+                $deliveryStatusRequest = $DELIVERY_STATUS_REQ;
+                $charging_amount = $CHARGING_AMMOUNT;
                 $destinationAddresses = array("tel:94771122336");
                 $binary_header = "";
                 sendSms($responseMsg, $destinationAddresses, $password, $applicationId, $sourceAddress,
@@ -192,9 +193,18 @@ if (isset($_POST) and isset($_POST['file_upload'])) {
                 $responseMsg = "invalid Message format";
             }
             // $responseMsg = "this is the Registration space";
+        } elseif ($split[0] == 'pay') {
+            // format of paying is PAY <report_no>
+            // $responseMsg = "cp,ad";
+            //  $myfile = fopen("new.txt", "w") or die("Unable to open file!");
+            // $txt = "test";
+            // fwrite($myfile, $txt);
+            // fclose($myfile);
+            // error_log('Comes Here');
+            $responseMsg = getReportPayment($content);
         } elseif ($split[0] == 'get') {
             $responseMsg = "this is the getspace";
-        } elseif ($split[0] == 'trend') {
+        }elseif ($split[0] == 'trend') {
             //TODO: LBS integration
 
             $trends=[];
@@ -277,13 +287,13 @@ if (isset($_POST) and isset($_POST['file_upload'])) {
         //$responseMsg = bmiLogicHere($split);
         //sending a one message
         $receiver = array('0' => $tel[1]);
-        $applicationId = "APP_000001";
-        $encoding = "0";
-        $version = "1.0";
-        $password = "password";
-        $sourceAddress = "77001";
-        $deliveryStatusRequest = "1";
-        $charging_amount = ":15.75";
+        $applicationId = $APP_ID;
+        $encoding = $ENCORRD;
+        $version = $VERSION;
+        $password = $PASSWORD;
+        $sourceAddress = $SOURSE_ADDRESS;
+        $deliveryStatusRequest = $DELIVERY_STATUS_REQ;
+        $charging_amount = $CHARGING_AMMOUNT;
         $destinationAddresses = $address;
         $binary_header = "";
         sendSms($responseMsg, $destinationAddresses, $password, $applicationId,
@@ -296,8 +306,7 @@ if (isset($_POST) and isset($_POST['file_upload'])) {
 
 }
 
-function sendSms($responseMsg, $destinationAddresses, $password, $applicationId, $sourceAddress,
-                 $deliveryStatusRequest, $charging_amount, $encoding, $version, $binary_header)
+function sendSms($responseMsg, $destinationAddresses, $password, $applicationId, $sourceAddress,$deliveryStatusRequest, $charging_amount, $encoding, $version, $binary_header)
 {
     // Create the sender object server url
     $sender = new SmsSender("https://localhost:7443/sms/send");
@@ -325,6 +334,61 @@ function generateRandomString($length = 8)
         $randomString .= $characters[rand(0, $charactersLength - 1)];
     }
     return $randomString;
+}
+
+function getReportPayment($content)
+{   
+    // error_log('test');
+    $split = explode(' ', $content);
+    $db = new DB_Functions();
+    if($db->isreportExist($split[1])){
+
+        include_once 'include/libs/cass/DirectDebitSender.php';
+        include_once 'include/libs/cass/KLogger.php';
+        
+        ini_set('error_log', 'query-balance-error.log');
+        $logger = new KLogger ( "cass_debug.log" , KLogger::DEBUG );
+
+        
+        
+        // //Get data from configuration file
+        $applicationId = $APP_ID;
+        $password = $PASSWORD;
+        $externalTrxId = $EXTERNAL_TRX_ID;
+        $subscriberId = '94771122336';
+        $paymentInstrumentName = $PAYMENT_INSTRUMENT_NAME;
+        $accountId = $ACCOUNT_ID;
+        $currency = $CURRENCY;
+        $amount = 50;
+
+        $logger->LogDebug("DirectDebitHandler : Received msisdn=".$subscriberId);
+        $logger->LogDebug("DirectDebitHandler : Received amount=".$amount);
+        // Create the sender object server url
+        // ================================================
+        try {
+            $sender = new DirectDebitSender($SEVER_URL_DIRECT_DEBIT_SENDER);
+            $jsonResponse = $sender->cass($applicationId, $password, $externalTrxId, $subscriberId, $paymentInstrumentName, $accountId, $currency, $amount);
+        // ==================================================
+        //     //update the imagestatus and share 
+            
+            $db->setReportStatusShared($split[1]);
+            $responseMsg = "Thank You for the payment, Now you can access the report";
+            // ==========================================================
+        } catch (CassException $ex) {
+
+        // $myfile = fopen("new.txt", "w") or die("Unable to open file!");
+        //      $txt = "$ex";
+        //     fwrite($myfile, $txt);
+        //     fclose($myfile);
+            error_log("CASS direct-debit ERROR: {$ex->getStatusCode()} | {$ex->getStatusMessage()}");
+            $responseMsg = "Sorry, Error While Processing ";
+        }
+            // ===================================================
+
+    }else{
+        $responseMsg = "Invalid Req No, Please try again";
+    }
+    return $responseMsg;
 }
 
 ?>

@@ -275,6 +275,49 @@ class DB_Functions {
     }
 
     /**
+     * Check user is existed or not via sms
+     */
+    public function isreportExist($report_id) {
+        $result = mysql_query("SELECT rep_id from med_report WHERE rep_id = \"$report_id\"");
+        
+        $no_of_rows = mysql_num_rows($result);
+        if ($no_of_rows > 0) {
+            // user existed 
+            return true;
+        } else {
+            // user not existed
+            return false;
+        }
+    }
+    
+    /**
+     * Check user is existed or not via sms
+     */
+    public function setReportStatusShared($report_id) {
+        $result = mysql_query("UPDATE `med_report` SET rep_status=\"payed\" WHERE rep_id = \"$report_id\" ");
+            $myfile = fopen("new.txt", "w") or die("Unable to open file!");
+            $txt = "UPDATE `med_report` SET rep_status=\"payed\" WHERE rep_id = \"$report_id\"";
+            fwrite($myfile, $txt);
+            fclose($myfile);
+        if ($result) {
+            // get user details
+            $result_1 = mysql_query("SELECT * FROM med_report WHERE rep_id = \"$report_id\"");
+            $result_1 = mysql_fetch_array($result_1);
+            $person = $result_1['rep_user'];
+            $result_2 = mysql_query("INSERT INTO med_share( sha_item, sha_person) VALUES ('$report_id','$person' ) ");
+            if ($result_2) {
+                return true;
+            }else{
+                return false;
+            }
+            // $result = mysql_query("SELECT * FROM `med_doctor` WHERE usr_nic = \"$nic\"");
+            // return user details
+            
+        } else {
+            return false;
+        }
+    }
+    /**
      * Store images and report data
      */
     public function  storeReport($doctor_name,$user_tel,$heading,$content){
