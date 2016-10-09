@@ -47,3 +47,9 @@ Temporary Items
 .apdisk
 new.txt
 log.txt
+query-balance-error.log
+cass_debug.log
+sms-app-error.log
+query-balance-error.log
+log.txt
+cass_debug.log

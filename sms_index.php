@@ -82,7 +82,11 @@ if (isset($_POST) and isset($_POST['file_upload'])) {
                     $responseMsg = "your Report is not good,Please Consult a doctor.To access in web payto report id:" . $report_id;
                 }
                 break;
-                $receiver = array('0' => $tel[1]);
+                if ($tel[1].length == 10) {
+                    //remove the first character of the text
+                    $tel[1][0]="";
+                }
+                $receiver = array('0' => 'tel:94'.$tel[1]);
                 $applicationId = $APP_ID;
                 $encoding = $ENCORRD;
                 $version = $VERSION;
@@ -90,7 +94,7 @@ if (isset($_POST) and isset($_POST['file_upload'])) {
                 $sourceAddress = $SOURSE_ADDRESS;
                 $deliveryStatusRequest = $DELIVERY_STATUS_REQ;
                 $charging_amount = $CHARGING_AMMOUNT;
-                $destinationAddresses = array("tel:94771122336");
+                $destinationAddresses = $receiver;//array("tel:94771122336");
                 $binary_header = "";
                 sendSms($responseMsg, $destinationAddresses, $password, $applicationId, $sourceAddress,
                     $deliveryStatusRequest, $charging_amount, $encoding, $version, $binary_header);
@@ -110,8 +114,8 @@ if (isset($_POST) and isset($_POST['file_upload'])) {
 
     //new user store in db
     $db = new DB_Functions();
-    $result = $db->storeUserWeb($name, $mobile, $email, $password, $nic, $type, '', '', '');
 
+    $result = $db->storeUserWeb($name, $mobile, $email, $password, $nic, $type, '', '', '');
     if ($result) {
         header('Location: http://localhost:8080/LabUser/addpatient.jsp');
     }
@@ -135,10 +139,21 @@ if (isset($_POST) and isset($_POST['file_upload'])) {
         $base_location = $_POST['based_location'];
         $reg_no = $_POST['reg_no'];
     }
+    $address = $mobile;
+    if ($address.length == 10) {
+        $address[0]="";
+    }
+    $address = "tel:94".$address;
 
-    //new user store in db
-    $db = new DB_Functions();
-    $result = $db->storeUserWeb($name, $mobile, $email, $password, $nic, $type, $speciality, $base_location, $reg_no);
+    $SUB_RESULT = addSubscription($address,$APP_ID,$PASSWORD,$VERSION,$SERVER_URL_SUBSCRIBE);
+    if($SUB_RESULT){ 
+        //new user store in db
+        $db = new DB_Functions();
+        $result = $db->storeUserWeb($name, $mobile, $email, $password, $nic, $type, $speciality, $base_location, $reg_no);
+    }
+    // else{
+    //     $responseMsg = "Subscription Unsucessful";
+    // }
 
     if ($result) {
         header('Location: http://localhost:8080/index.jsp');
@@ -179,15 +194,22 @@ if (isset($_POST) and isset($_POST['file_upload'])) {
                     // rending responce when already user  is there by the nic
                     $responseMsg = "You are already a User";
                 } else {
+                    $address = "tel:".$tel[1];
                     // store user
-                    $user = $db->storeUser($name, $mobile, $password, $nic, $type);
-                    if ($user) {
-                        //sending responce when sucess
-                        $responseMsg = "You has successfully Registered";
-                    } else {
-                        //if the user query failed wile running
-                        $responseMsg = "Invalid Request";
-                    }
+                    $SUB_RESULT = addSubscription($address,$APP_ID,$PASSWORD,$VERSION,$SERVER_URL_SUBSCRIBE);
+                    if($SUB_RESULT){  
+                        $user = $db->storeUser($name, $mobile, $password, $nic, $type);
+                        if ($user) {
+                            //sending responce when sucess
+                            $responseMsg = "You has successfully Registered";
+                        } else {
+                            //if the user query failed wile running
+                            $responseMsg = "Invalid Request";
+                        }
+                    }else{
+                        $responseMsg = "Subscription Unsucessful";
+                    }   
+                    
                 }
             } else {
                 $responseMsg = "invalid Message format";
@@ -201,7 +223,7 @@ if (isset($_POST) and isset($_POST['file_upload'])) {
             // fwrite($myfile, $txt);
             // fclose($myfile);
             // error_log('Comes Here');
-            $responseMsg = getReportPayment($content);
+            $responseMsg = getReportPayment($content,$APP_ID,$PASSWORD,$EXTERNAL_TRX_ID,$PAYMENT_INSTRUMENT_NAME,$ACCOUNT_ID,$CURRENCY,$SEVER_URL_DIRECT_DEBIT_SENDER);
         } elseif ($split[0] == 'get') {
             $responseMsg = "this is the getspace";
         }elseif ($split[0] == 'trend') {
@@ -336,7 +358,7 @@ function generateRandomString($length = 8)
     return $randomString;
 }
 
-function getReportPayment($content)
+function getReportPayment($content,$APP_ID,$PASSWORD,$EXTERNAL_TRX_ID,$PAYMENT_INSTRUMENT_NAME,$ACCOUNT_ID,$CURRENCY,$SEVER_URL_DIRECT_DEBIT_SENDER)
 {   
     // error_log('test');
     $split = explode(' ', $content);
@@ -389,6 +411,35 @@ function getReportPayment($content)
         $responseMsg = "Invalid Req No, Please try again";
     }
     return $responseMsg;
+}
+
+function addSubscription($tel,$APP_ID,$PASSWORD,$VERSION,$SERVER_URL_SUBSCRIBE)
+{
+    $url = $SERVER_URL_SUBSCRIBE;
+
+    // use key 'http' even if you send the request to https://...
+    $response["applicationId"] = $APP_ID;
+    $response["password"] = $PASSWORD;
+    $response["version"] = $VERSION;
+    $response["action"] = "1";
+    $response["subscriberId"] = $tel;
+            echo json_encode($response);
+    $options = array(
+        'http' => array(
+            'header'  => "Content-type: application/json\r\n",
+            'method'  => 'POST',
+            'content' => json_encode($response)
+        )
+    );
+    $context  = stream_context_create($options);
+    $result = file_get_contents($url, false, $context);
+    error_log($result);
+    if ($result === FALSE) { return false; }
+        else{
+            return true;
+    }
+
+// var_dump($result);
 }
 
 ?>

@@ -16,4 +16,6 @@
 //  If application sms-mt sending https url used urls as below
     $SEVER_URL_QUERY_BALANCE_SENDER = "https://localhost:7443/caas/balance/query";
     $SEVER_URL_DIRECT_DEBIT_SENDER = "https://127.0.0.1:7443/caas/direct/debit";
+    $SERVER_URL_SUBSCRIBE = "http://localhost:7000/subscription/send";
+    // $SERVER_URL_SUBSCRIBE = "https://api.dialog.lk/subscription/send";
 ?>

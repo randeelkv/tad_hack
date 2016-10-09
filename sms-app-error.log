@@ -1,0 +1,49 @@
+[09-Oct-2016 20:12:52 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 417
+[09-Oct-2016 20:12:52 Europe/Berlin] PHP Notice:  Undefined variable: APP_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 420
+[09-Oct-2016 20:12:52 Europe/Berlin] PHP Notice:  Undefined variable: PASSWORD in D:\xampp\htdocs\tad_hack\sms_index.php on line 421
+[09-Oct-2016 20:12:52 Europe/Berlin] PHP Notice:  Undefined variable: VERSION in D:\xampp\htdocs\tad_hack\sms_index.php on line 422
+[09-Oct-2016 20:12:52 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 434
+[09-Oct-2016 20:13:01 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 417
+[09-Oct-2016 20:13:01 Europe/Berlin] PHP Notice:  Undefined variable: APP_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 420
+[09-Oct-2016 20:13:01 Europe/Berlin] PHP Notice:  Undefined variable: PASSWORD in D:\xampp\htdocs\tad_hack\sms_index.php on line 421
+[09-Oct-2016 20:13:01 Europe/Berlin] PHP Notice:  Undefined variable: VERSION in D:\xampp\htdocs\tad_hack\sms_index.php on line 422
+[09-Oct-2016 20:13:01 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 434
+[09-Oct-2016 20:14:15 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 417
+[09-Oct-2016 20:14:15 Europe/Berlin] PHP Notice:  Undefined variable: APP_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 420
+[09-Oct-2016 20:14:15 Europe/Berlin] PHP Notice:  Undefined variable: PASSWORD in D:\xampp\htdocs\tad_hack\sms_index.php on line 421
+[09-Oct-2016 20:14:15 Europe/Berlin] PHP Notice:  Undefined variable: VERSION in D:\xampp\htdocs\tad_hack\sms_index.php on line 422
+[09-Oct-2016 20:14:15 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 434
+[09-Oct-2016 20:16:00 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 418
+[09-Oct-2016 20:16:00 Europe/Berlin] PHP Notice:  Undefined variable: APP_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 421
+[09-Oct-2016 20:16:00 Europe/Berlin] PHP Notice:  Undefined variable: PASSWORD in D:\xampp\htdocs\tad_hack\sms_index.php on line 422
+[09-Oct-2016 20:16:00 Europe/Berlin] PHP Notice:  Undefined variable: VERSION in D:\xampp\htdocs\tad_hack\sms_index.php on line 423
+[09-Oct-2016 20:16:00 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 435
+[09-Oct-2016 20:16:34 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 418
+[09-Oct-2016 20:16:34 Europe/Berlin] PHP Notice:  Undefined variable: APP_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 421
+[09-Oct-2016 20:16:34 Europe/Berlin] PHP Notice:  Undefined variable: PASSWORD in D:\xampp\htdocs\tad_hack\sms_index.php on line 422
+[09-Oct-2016 20:16:34 Europe/Berlin] PHP Notice:  Undefined variable: VERSION in D:\xampp\htdocs\tad_hack\sms_index.php on line 423
+[09-Oct-2016 20:16:34 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 435
+[09-Oct-2016 20:16:47 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 418
+[09-Oct-2016 20:16:47 Europe/Berlin] PHP Notice:  Undefined variable: APP_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 421
+[09-Oct-2016 20:16:47 Europe/Berlin] PHP Notice:  Undefined variable: PASSWORD in D:\xampp\htdocs\tad_hack\sms_index.php on line 422
+[09-Oct-2016 20:16:47 Europe/Berlin] PHP Notice:  Undefined variable: VERSION in D:\xampp\htdocs\tad_hack\sms_index.php on line 423
+[09-Oct-2016 20:16:47 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 435
+[09-Oct-2016 20:18:01 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 418
+[09-Oct-2016 20:18:01 Europe/Berlin] PHP Notice:  Undefined variable: APP_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 421
+[09-Oct-2016 20:18:01 Europe/Berlin] PHP Notice:  Undefined variable: PASSWORD in D:\xampp\htdocs\tad_hack\sms_index.php on line 422
+[09-Oct-2016 20:18:01 Europe/Berlin] PHP Notice:  Undefined variable: VERSION in D:\xampp\htdocs\tad_hack\sms_index.php on line 423
+[09-Oct-2016 20:18:01 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 435
+[09-Oct-2016 20:18:01 Europe/Berlin] 
+[09-Oct-2016 20:18:57 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 418
+[09-Oct-2016 20:18:57 Europe/Berlin] PHP Notice:  Undefined variable: APP_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 421
+[09-Oct-2016 20:18:57 Europe/Berlin] PHP Notice:  Undefined variable: PASSWORD in D:\xampp\htdocs\tad_hack\sms_index.php on line 422
+[09-Oct-2016 20:18:57 Europe/Berlin] PHP Notice:  Undefined variable: VERSION in D:\xampp\htdocs\tad_hack\sms_index.php on line 423
+[09-Oct-2016 20:18:57 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 435
+[09-Oct-2016 20:18:57 Europe/Berlin] {"applicationId":null,"password":null,"version":null,"action":"1","subscriberId":"tel:94771122336"}
+[09-Oct-2016 20:22:32 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 418
+[09-Oct-2016 20:22:32 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 435
+[09-Oct-2016 20:22:32 Europe/Berlin] {"applicationId":"APP_000017","password":"95904999aa8edb0c038b3295fdd271de","version":"1.0","action":"1","subscriberId":"tel:94771122336"}
+[09-Oct-2016 20:23:37 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 418
+[09-Oct-2016 20:23:37 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 435
+[09-Oct-2016 20:23:37 Europe/Berlin] 
+[09-Oct-2016 20:25:03 Europe/Berlin] {"requestId":"1476037503072","statusDetail":"User Successfully registered","version":"1.0","statusCode":"S1000"}

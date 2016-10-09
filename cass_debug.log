@@ -34,3 +34,21 @@
 2016-10-09 15:52:30 - DEBUG --> DirectDebitSender cassMany() : Parameters received: applicationId=APP_000017 externalTrxId=12345678901234567890123456789012 subscriberId=94771122336 paymentInstrumentName=MobileAccount accountId=123456 currency=LKR amount=50 
 2016-10-09 15:52:30 - DEBUG --> DirectDebitSender sendRequest() : Request={"applicationId":"APP_000017","password":"95904999aa8edb0c038b3295fdd271de","externalTrxId":"12345678901234567890123456789012","subscriberId":"94771122336","paymentInstrumentName":"MobileAccount","accountId":"123456","currency":"LKR","amount":50} 
 2016-10-09 15:52:30 - DEBUG --> DirectDebitSender sendRequest() : Response= 
+2016-10-09 18:23:10 - DEBUG --> DirectDebitHandler : Received msisdn=94771122336 
+2016-10-09 18:23:10 - DEBUG --> DirectDebitHandler : Received amount=50 
+2016-10-09 18:23:10 - DEBUG --> DirectDebitSender cass() : Parameters received: applicationId= externalTrxId= subscriberId=94771122336 paymentInstrumentName= accountId= currency= amount=50 
+2016-10-09 18:23:10 - DEBUG --> DirectDebitSender cassMany() : Parameters received: applicationId= externalTrxId= subscriberId=94771122336 paymentInstrumentName= accountId= currency= amount=50 
+2016-10-09 18:23:10 - DEBUG --> DirectDebitSender sendRequest() : Request={"applicationId":null,"password":null,"externalTrxId":null,"subscriberId":"94771122336","paymentInstrumentName":null,"accountId":null,"currency":null,"amount":50} 
+2016-10-09 18:23:10 - DEBUG --> DirectDebitSender sendRequest() : Response= 
+2016-10-09 20:25:22 - DEBUG --> DirectDebitHandler : Received msisdn=94771122336 
+2016-10-09 20:25:22 - DEBUG --> DirectDebitHandler : Received amount=50 
+2016-10-09 20:25:22 - DEBUG --> DirectDebitSender cass() : Parameters received: applicationId=APP_000017 externalTrxId=12345678901234567890123456789012 subscriberId=94771122336 paymentInstrumentName=MobileAccount accountId=123456 currency=LKR amount=50 
+2016-10-09 20:25:22 - DEBUG --> DirectDebitSender cassMany() : Parameters received: applicationId=APP_000017 externalTrxId=12345678901234567890123456789012 subscriberId=94771122336 paymentInstrumentName=MobileAccount accountId=123456 currency=LKR amount=50 
+2016-10-09 20:25:22 - DEBUG --> DirectDebitSender sendRequest() : Request={"applicationId":"APP_000017","password":"95904999aa8edb0c038b3295fdd271de","externalTrxId":"12345678901234567890123456789012","subscriberId":"94771122336","paymentInstrumentName":"MobileAccount","accountId":"123456","currency":"LKR","amount":50} 
+2016-10-09 20:25:22 - DEBUG --> DirectDebitSender sendRequest() : Response= 
+2016-10-09 20:27:02 - DEBUG --> DirectDebitHandler : Received msisdn=94771122336 
+2016-10-09 20:27:02 - DEBUG --> DirectDebitHandler : Received amount=50 
+2016-10-09 20:27:02 - DEBUG --> DirectDebitSender cass() : Parameters received: applicationId=APP_000017 externalTrxId=12345678901234567890123456789012 subscriberId=94771122336 paymentInstrumentName=MobileAccount accountId=123456 currency=LKR amount=50 
+2016-10-09 20:27:02 - DEBUG --> DirectDebitSender cassMany() : Parameters received: applicationId=APP_000017 externalTrxId=12345678901234567890123456789012 subscriberId=94771122336 paymentInstrumentName=MobileAccount accountId=123456 currency=LKR amount=50 
+2016-10-09 20:27:02 - DEBUG --> DirectDebitSender sendRequest() : Request={"applicationId":"APP_000017","password":"95904999aa8edb0c038b3295fdd271de","externalTrxId":"12345678901234567890123456789012","subscriberId":"94771122336","paymentInstrumentName":"MobileAccount","accountId":"123456","currency":"LKR","amount":50} 
+2016-10-09 20:27:02 - DEBUG --> DirectDebitSender sendRequest() : Response= 

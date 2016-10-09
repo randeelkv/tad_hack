@@ -1,1 +1,12 @@
 [09-Oct-2016 15:52:30 Europe/Berlin] CASS direct-debit ERROR: 500 | Server URL is invalid
+[09-Oct-2016 18:23:10 Europe/Berlin] PHP Notice:  Undefined variable: APP_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 355
+[09-Oct-2016 18:23:10 Europe/Berlin] PHP Notice:  Undefined variable: PASSWORD in D:\xampp\htdocs\tad_hack\sms_index.php on line 356
+[09-Oct-2016 18:23:10 Europe/Berlin] PHP Notice:  Undefined variable: EXTERNAL_TRX_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 357
+[09-Oct-2016 18:23:10 Europe/Berlin] PHP Notice:  Undefined variable: PAYMENT_INSTRUMENT_NAME in D:\xampp\htdocs\tad_hack\sms_index.php on line 359
+[09-Oct-2016 18:23:10 Europe/Berlin] PHP Notice:  Undefined variable: ACCOUNT_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 360
+[09-Oct-2016 18:23:10 Europe/Berlin] PHP Notice:  Undefined variable: CURRENCY in D:\xampp\htdocs\tad_hack\sms_index.php on line 361
+[09-Oct-2016 18:23:10 Europe/Berlin] PHP Notice:  Undefined variable: SEVER_URL_DIRECT_DEBIT_SENDER in D:\xampp\htdocs\tad_hack\sms_index.php on line 369
+[09-Oct-2016 18:23:10 Europe/Berlin] CASS direct-debit ERROR: 500 | Server URL is invalid
+[09-Oct-2016 20:25:22 Europe/Berlin] PHP Notice:  Undefined variable: SEVER_URL_DIRECT_DEBIT_SENDER in D:\xampp\htdocs\tad_hack\sms_index.php on line 391
+[09-Oct-2016 20:25:22 Europe/Berlin] CASS direct-debit ERROR: 500 | Server URL is invalid
+[09-Oct-2016 20:27:02 Europe/Berlin] CASS direct-debit ERROR: 500 | Server URL is invalid
