@@ -47,3 +47,8 @@
 [09-Oct-2016 20:23:37 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 435
 [09-Oct-2016 20:23:37 Europe/Berlin] 
 [09-Oct-2016 20:25:03 Europe/Berlin] {"requestId":"1476037503072","statusDetail":"User Successfully registered","version":"1.0","statusCode":"S1000"}
+[10-Oct-2016 18:29:56 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'Some of the required parameters are not provided' in D:\xampp\htdocs\tad_hack\include\libs\sms\SmsReceiver.php:37
+Stack trace:
+#0 D:\xampp\htdocs\tad_hack\sms_index.php(165): SmsReceiver->__construct()
+#1 {main}
+  thrown in D:\xampp\htdocs\tad_hack\include\libs\sms\SmsReceiver.php on line 37

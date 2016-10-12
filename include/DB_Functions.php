@@ -294,9 +294,9 @@ class DB_Functions {
      * Check user is existed or not via sms
      */
     public function setReportStatusShared($report_id) {
-        $result = mysql_query("UPDATE `med_report` SET rep_status=\"payed\" WHERE rep_id = \"$report_id\" ");
+        $result = mysql_query("UPDATE `med_report` SET `rep_status`=\"payed\" WHERE `rep_id` = \"$report_id\" ");
             $myfile = fopen("new.txt", "w") or die("Unable to open file!");
-            $txt = "UPDATE `med_report` SET rep_status=\"payed\" WHERE rep_id = \"$report_id\"";
+            $txt = "UPDATE `med_report` SET `rep_status`=\"payed\" WHERE `rep_id` = \"$report_id\"";
             fwrite($myfile, $txt);
             fclose($myfile);
         if ($result) {
