@@ -22,17 +22,13 @@ class DB_Functions {
      * Storing new user
      * returns user details
      */
-    public function storeUser($name, $mobile, $password, $nic, $type, $location) {
-        // require_once 'log.php';
-        $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
-        $txt = "John Doe\n";
-        fwrite($myfile, $txt);
-        fclose($myfile);
-        $result = mysql_query("INSERT INTO users(usr_email, usr_type, usr_location, usr_nic, usr_mobile, usr_encrypted_password, usr_created_at) VALUES( '$name','$type','$location','$nic', '$mobile', '$password', NOW())");
-        // error_log("INSERT INTO users(usr_email, usr_type, usr_location, usr_nic, usr_mobile, usr_encrypted_password, usr_created_at) VALUES( '$name','$type','$location','$nic', '$mobile', '$password', NOW())");
-        // logFile("INSERT INTO users(usr_email, usr_type, usr_location, usr_nic, usr_mobile, usr_encrypted_password, usr_created_at) VALUES( '$name','$type','$location','$nic', '$mobile', '$password', NOW())");
-        // check for successful store
+    public function storeUser($name, $mobile, $password,$nic,$type) {
+        //$hash = $this->hashSSHA($password);
+        //$encrypted_password = $hash["encrypted"]; // encrypted password
+        //$salt = $hash["salt"]; // salt
 
+        $result = mysql_query("INSERT INTO users(usr_email,usr_type,usr_nic, usr_mobile, usr_encrypted_password, usr_created_at) VALUES( '$name','$type','$nic', '$mobile', '$password', NOW())");
+        // check for successful store
         if ($result) {
             // get user details 
             $result = mysql_query("SELECT * FROM users WHERE usr_nic = \"$nic\"");
@@ -47,11 +43,11 @@ class DB_Functions {
      * Storing new user by lab assistant
      * returns user details
      */
-    public function storeUserWeb($name, $mobile,$email, $password,$nic,$type,$speciality,$location,$reg_no) {
+    public function storeUserWeb($name, $mobile,$email, $password,$nic,$type,$speciality,$base_location,$reg_no) {
 //        $hash = $this->hashSSHA($password);
 //        $encrypted_password = $hash["encrypted"]; // encrypted password
 //        $salt = $hash["salt"]; // salt
-        $result = mysql_query("INSERT INTO users( usr_name,usr_type,usr_location,usr_nic, usr_mobile, usr_email, usr_encrypted_password, usr_created_at) VALUES( '$name','$type','$location','$nic', '$mobile','$email', '$password', NOW())");
+        $result = mysql_query("INSERT INTO users( usr_name,usr_type,usr_nic, usr_mobile, usr_email, usr_encrypted_password, usr_created_at) VALUES( '$name','$type','$nic', '$mobile','$email', '$password', NOW())");
         // check for successful store
         if ($result) {
             $user_id='';
@@ -76,11 +72,11 @@ class DB_Functions {
      * Storing new user
      * returns user details
      */
-    public function storeOtherUser($name, $email, $password,$type,$nic,$location ) {
+    public function storeOtherUser($name, $email, $password,$type,$nic ) {
         //$hash = $this->hashSSHA($password);
         //$encrypted_password = $hash["encrypted"]; // encrypted password
         //$salt = $hash["salt"]; // salt
-		$result = mysql_query("INSERT INTO users(usr_name,usr_type,usr_location,usr_nic, usr_email, usr_encrypted_password, usr_created_at) VALUES('$name','$type','$location','$nic', '$email', '$password', NOW())");
+		$result = mysql_query("INSERT INTO users(usr_name,usr_type,usr_nic, usr_email, usr_encrypted_password, usr_created_at) VALUES('$name','$type','$nic', '$email', '$password', NOW())");
         if ($result) {
             // get user details 
             $result = mysql_query("SELECT * FROM users WHERE usr_nic = \"$nic\"");
@@ -298,9 +294,9 @@ class DB_Functions {
      * Check user is existed or not via sms
      */
     public function setReportStatusShared($report_id) {
-        $result = mysql_query("UPDATE `med_report` SET rep_status=\"payed\" WHERE rep_id = \"$report_id\" ");
+        $result = mysql_query("UPDATE `med_report` SET `rep_status`=\"payed\" WHERE `rep_id` = \"$report_id\" ");
             $myfile = fopen("new.txt", "w") or die("Unable to open file!");
-            $txt = "UPDATE `med_report` SET rep_status=\"payed\" WHERE rep_id = \"$report_id\"";
+            $txt = "UPDATE `med_report` SET `rep_status`=\"payed\" WHERE `rep_id` = \"$report_id\"";
             fwrite($myfile, $txt);
             fclose($myfile);
         if ($result) {
@@ -373,7 +369,7 @@ class DB_Functions {
     /**
      * return content of lab reports for analysing trends
      */
-    public function getReportContent($city){
+    function getReportContent($city){
         $content = [];
         $query="SELECT rep_content FROM tad_med.med_report r, users u WHERE u.usr_id=r.rep_user AND u.usr_location='$city' and r.rep_heading = 'FBC'";
         if ($query_run = mysql_query($query)) {

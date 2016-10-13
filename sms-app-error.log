@@ -1,54 +1,77 @@
-[09-Oct-2016 20:12:52 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 417
-[09-Oct-2016 20:12:52 Europe/Berlin] PHP Notice:  Undefined variable: APP_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 420
-[09-Oct-2016 20:12:52 Europe/Berlin] PHP Notice:  Undefined variable: PASSWORD in D:\xampp\htdocs\tad_hack\sms_index.php on line 421
-[09-Oct-2016 20:12:52 Europe/Berlin] PHP Notice:  Undefined variable: VERSION in D:\xampp\htdocs\tad_hack\sms_index.php on line 422
-[09-Oct-2016 20:12:52 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 434
-[09-Oct-2016 20:13:01 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 417
-[09-Oct-2016 20:13:01 Europe/Berlin] PHP Notice:  Undefined variable: APP_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 420
-[09-Oct-2016 20:13:01 Europe/Berlin] PHP Notice:  Undefined variable: PASSWORD in D:\xampp\htdocs\tad_hack\sms_index.php on line 421
-[09-Oct-2016 20:13:01 Europe/Berlin] PHP Notice:  Undefined variable: VERSION in D:\xampp\htdocs\tad_hack\sms_index.php on line 422
-[09-Oct-2016 20:13:01 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 434
-[09-Oct-2016 20:14:15 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 417
-[09-Oct-2016 20:14:15 Europe/Berlin] PHP Notice:  Undefined variable: APP_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 420
-[09-Oct-2016 20:14:15 Europe/Berlin] PHP Notice:  Undefined variable: PASSWORD in D:\xampp\htdocs\tad_hack\sms_index.php on line 421
-[09-Oct-2016 20:14:15 Europe/Berlin] PHP Notice:  Undefined variable: VERSION in D:\xampp\htdocs\tad_hack\sms_index.php on line 422
-[09-Oct-2016 20:14:15 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 434
-[09-Oct-2016 20:16:00 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 418
-[09-Oct-2016 20:16:00 Europe/Berlin] PHP Notice:  Undefined variable: APP_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 421
-[09-Oct-2016 20:16:00 Europe/Berlin] PHP Notice:  Undefined variable: PASSWORD in D:\xampp\htdocs\tad_hack\sms_index.php on line 422
-[09-Oct-2016 20:16:00 Europe/Berlin] PHP Notice:  Undefined variable: VERSION in D:\xampp\htdocs\tad_hack\sms_index.php on line 423
-[09-Oct-2016 20:16:00 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 435
-[09-Oct-2016 20:16:34 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 418
-[09-Oct-2016 20:16:34 Europe/Berlin] PHP Notice:  Undefined variable: APP_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 421
-[09-Oct-2016 20:16:34 Europe/Berlin] PHP Notice:  Undefined variable: PASSWORD in D:\xampp\htdocs\tad_hack\sms_index.php on line 422
-[09-Oct-2016 20:16:34 Europe/Berlin] PHP Notice:  Undefined variable: VERSION in D:\xampp\htdocs\tad_hack\sms_index.php on line 423
-[09-Oct-2016 20:16:34 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 435
-[09-Oct-2016 20:16:47 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 418
-[09-Oct-2016 20:16:47 Europe/Berlin] PHP Notice:  Undefined variable: APP_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 421
-[09-Oct-2016 20:16:47 Europe/Berlin] PHP Notice:  Undefined variable: PASSWORD in D:\xampp\htdocs\tad_hack\sms_index.php on line 422
-[09-Oct-2016 20:16:47 Europe/Berlin] PHP Notice:  Undefined variable: VERSION in D:\xampp\htdocs\tad_hack\sms_index.php on line 423
-[09-Oct-2016 20:16:47 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 435
-[09-Oct-2016 20:18:01 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 418
-[09-Oct-2016 20:18:01 Europe/Berlin] PHP Notice:  Undefined variable: APP_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 421
-[09-Oct-2016 20:18:01 Europe/Berlin] PHP Notice:  Undefined variable: PASSWORD in D:\xampp\htdocs\tad_hack\sms_index.php on line 422
-[09-Oct-2016 20:18:01 Europe/Berlin] PHP Notice:  Undefined variable: VERSION in D:\xampp\htdocs\tad_hack\sms_index.php on line 423
-[09-Oct-2016 20:18:01 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 435
-[09-Oct-2016 20:18:01 Europe/Berlin] 
-[09-Oct-2016 20:18:57 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 418
-[09-Oct-2016 20:18:57 Europe/Berlin] PHP Notice:  Undefined variable: APP_ID in D:\xampp\htdocs\tad_hack\sms_index.php on line 421
-[09-Oct-2016 20:18:57 Europe/Berlin] PHP Notice:  Undefined variable: PASSWORD in D:\xampp\htdocs\tad_hack\sms_index.php on line 422
-[09-Oct-2016 20:18:57 Europe/Berlin] PHP Notice:  Undefined variable: VERSION in D:\xampp\htdocs\tad_hack\sms_index.php on line 423
-[09-Oct-2016 20:18:57 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 435
-[09-Oct-2016 20:18:57 Europe/Berlin] {"applicationId":null,"password":null,"version":null,"action":"1","subscriberId":"tel:94771122336"}
-[09-Oct-2016 20:22:32 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 418
-[09-Oct-2016 20:22:32 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 435
-[09-Oct-2016 20:22:32 Europe/Berlin] {"applicationId":"APP_000017","password":"95904999aa8edb0c038b3295fdd271de","version":"1.0","action":"1","subscriberId":"tel:94771122336"}
-[09-Oct-2016 20:23:37 Europe/Berlin] PHP Notice:  Undefined variable: SERVER_URL_SUBSCRIBE in D:\xampp\htdocs\tad_hack\sms_index.php on line 418
-[09-Oct-2016 20:23:37 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp\htdocs\tad_hack\sms_index.php on line 435
-[09-Oct-2016 20:23:37 Europe/Berlin] 
-[09-Oct-2016 20:25:03 Europe/Berlin] {"requestId":"1476037503072","statusDetail":"User Successfully registered","version":"1.0","statusCode":"S1000"}
-[10-Oct-2016 18:29:56 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'Some of the required parameters are not provided' in D:\xampp\htdocs\tad_hack\include\libs\sms\SmsReceiver.php:37
-Stack trace:
-#0 D:\xampp\htdocs\tad_hack\sms_index.php(165): SmsReceiver->__construct()
-#1 {main}
-  thrown in D:\xampp\htdocs\tad_hack\include\libs\sms\SmsReceiver.php on line 37
+[12-Oct-2016 18:58:42 Europe/Berlin] {"applicationId":"APP_000017","password":"95904999aa8edb0c038b3295fdd271de","version":"1.0","action":"1","subscriberId":"tel:94771122336"}
+[12-Oct-2016 18:58:43 Europe/Berlin] {"requestId":"1476291523877","statusDetail":"User already registered","version":"0.1,","statusCode":"E1351"}
+[12-Oct-2016 18:58:44 Europe/Berlin] GALLE
+[12-Oct-2016 19:00:15 Europe/Berlin] {"applicationId":"APP_000017","password":"95904999aa8edb0c038b3295fdd271de","version":"1.0","action":"1","subscriberId":"tel:94771122336"}
+[12-Oct-2016 19:00:16 Europe/Berlin] {"requestId":"1476291616535","statusDetail":"User already registered","version":"0.1,","statusCode":"E1351"}
+[12-Oct-2016 19:00:17 Europe/Berlin] GALLE
+[12-Oct-2016 19:04:17 Europe/Berlin] {"applicationId":"APP_000017","password":"95904999aa8edb0c038b3295fdd271de","version":"1.0","action":"1","subscriberId":"tel:94771122336"}
+[12-Oct-2016 19:04:18 Europe/Berlin] {"requestId":"1476291858575","statusDetail":"User already registered","version":"0.1,","statusCode":"E1351"}
+[12-Oct-2016 19:04:19 Europe/Berlin] GALLE
+[12-Oct-2016 19:05:32 Europe/Berlin] PHP Notice:  Undefined variable: responseMsg in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 331
+[12-Oct-2016 19:06:26 Europe/Berlin] PHP Notice:  Undefined variable: responseMsg in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 331
+[12-Oct-2016 19:06:51 Europe/Berlin] PHP Notice:  Undefined variable: responseMsg in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 331
+[12-Oct-2016 19:08:10 Europe/Berlin] PHP Notice:  Undefined variable: responseMsg in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 331
+[12-Oct-2016 19:10:22 Europe/Berlin] PHP Notice:  Undefined variable: responseMsg in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 331
+[12-Oct-2016 19:11:48 Europe/Berlin] PHP Notice:  Undefined variable: responseMsg in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 331
+[12-Oct-2016 19:13:03 Europe/Berlin] get medica
+[12-Oct-2016 19:13:20 Europe/Berlin] trend medica
+[12-Oct-2016 19:13:21 Europe/Berlin] PHP Notice:  Undefined variable: db in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 264
+[12-Oct-2016 19:13:21 Europe/Berlin] PHP Fatal error:  Call to a member function getReportContent() on null in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 264
+[12-Oct-2016 19:15:37 Europe/Berlin] trend medica
+[12-Oct-2016 19:15:38 Europe/Berlin] PHP Notice:  Undefined variable: db in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 264
+[12-Oct-2016 19:15:38 Europe/Berlin] PHP Fatal error:  Call to a member function getReportContent() on null in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 264
+[12-Oct-2016 19:17:13 Europe/Berlin] trend medica
+[12-Oct-2016 19:36:31 Europe/Berlin] get medica
+[12-Oct-2016 19:36:31 Europe/Berlin] {"statusCode":"S1000","timeStamp":"2016-10-12 23:06:31","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1476293791626","version":"1.0"}
+[12-Oct-2016 19:39:26 Europe/Berlin] get medica
+[12-Oct-2016 19:39:26 Europe/Berlin] PHP Notice:  Undefined variable: lat_lan in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 262
+[12-Oct-2016 19:39:26 Europe/Berlin] PHP Notice:  Use of undefined constant longitude - assumed 'longitude' in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 263
+[12-Oct-2016 19:39:26 Europe/Berlin] {"statusCode":"S1000","timeStamp":"2016-10-12 23:09:26","statusDetail":"Success","subscriberState":"True","horizontalAccuracy":"7.00","freshness":"100","longitude":"79.8333","latitude":"6.9167","messageId":"1476293966678","version":"1.0"}longitude
+[12-Oct-2016 19:39:27 Europe/Berlin] GALLE
+[12-Oct-2016 19:40:17 Europe/Berlin] get medica
+[12-Oct-2016 19:40:17 Europe/Berlin] PHP Notice:  Undefined variable: lat_lan in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 262
+[12-Oct-2016 19:40:17 Europe/Berlin] PHP Warning:  Illegal string offset 'longitude' in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 263
+[12-Oct-2016 19:40:17 Europe/Berlin] {
+[12-Oct-2016 19:40:18 Europe/Berlin] GALLE
+[12-Oct-2016 19:41:13 Europe/Berlin] get medica
+[12-Oct-2016 19:41:13 Europe/Berlin] PHP Warning:  Illegal string offset 'longitude' in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 262
+[12-Oct-2016 19:41:13 Europe/Berlin] {
+[12-Oct-2016 19:41:13 Europe/Berlin] GALLE
+[12-Oct-2016 19:44:14 Europe/Berlin] get medica
+[12-Oct-2016 19:44:14 Europe/Berlin] PHP Fatal error:  Cannot use object of type LbsResponse as array in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 532
+[12-Oct-2016 19:45:07 Europe/Berlin] get medica
+[12-Oct-2016 19:45:07 Europe/Berlin] PHP Warning:  error_log() expects parameter 1 to be string, object given in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 532
+[12-Oct-2016 19:45:07 Europe/Berlin] PHP Warning:  Illegal string offset 'longitude' in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 262
+[12-Oct-2016 19:45:07 Europe/Berlin] {
+[12-Oct-2016 19:45:07 Europe/Berlin] GALLE
+[12-Oct-2016 19:52:25 Europe/Berlin] get medica
+[12-Oct-2016 19:52:25 Europe/Berlin] 79.8333
+[12-Oct-2016 19:52:25 Europe/Berlin] PHP Warning:  Illegal string offset 'longitude' in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 262
+[12-Oct-2016 19:52:25 Europe/Berlin] {
+[12-Oct-2016 19:52:26 Europe/Berlin] GALLE
+[12-Oct-2016 19:54:16 Europe/Berlin] get medica
+[12-Oct-2016 19:54:17 Europe/Berlin] PHP Warning:  Illegal string offset 'longitude' in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 262
+[12-Oct-2016 19:54:17 Europe/Berlin] 7
+[12-Oct-2016 19:54:17 Europe/Berlin] GALLE
+[12-Oct-2016 19:55:04 Europe/Berlin] get medica
+[12-Oct-2016 19:55:05 Europe/Berlin] PHP Warning:  Illegal string offset 'longitude' in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 262
+[12-Oct-2016 19:55:05 Europe/Berlin] 7
+[12-Oct-2016 19:55:05 Europe/Berlin] GALLE
+[12-Oct-2016 19:57:22 Europe/Berlin] get medica
+[12-Oct-2016 19:57:23 Europe/Berlin] PHP Notice:  Undefined variable: longitude in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 262
+[12-Oct-2016 19:57:23 Europe/Berlin] PHP Fatal error:  Cannot access empty property in D:\xampp\htdocs\tad_hack\smsreceiver1.php on line 262
+[12-Oct-2016 19:58:39 Europe/Berlin] get medica
+[12-Oct-2016 19:58:39 Europe/Berlin] 6.9167
+[12-Oct-2016 19:58:40 Europe/Berlin] GALLE
+[12-Oct-2016 20:00:20 Europe/Berlin] get medica
+[12-Oct-2016 20:00:20 Europe/Berlin] 6.9167 79.8333
+[12-Oct-2016 20:00:21 Europe/Berlin] GALLE
+[12-Oct-2016 20:01:00 Europe/Berlin] get medica
+[12-Oct-2016 20:01:01 Europe/Berlin] GALLE
+[12-Oct-2016 20:05:30 Europe/Berlin] get medica
+[12-Oct-2016 20:05:30 Europe/Berlin] 6.9167#79.8333
+[12-Oct-2016 20:05:31 Europe/Berlin] COLOMBO
+[12-Oct-2016 20:08:15 Europe/Berlin] reg medica
+[12-Oct-2016 20:08:15 Europe/Berlin] {"applicationId":"APP_000017","password":"95904999aa8edb0c038b3295fdd271de","version":"1.0","action":"1","subscriberId":"tel:94771122336"}
+[12-Oct-2016 20:08:16 Europe/Berlin] {"requestId":"1476295696272","statusDetail":"User already registered","version":"0.1,","statusCode":"E1351"}
+[12-Oct-2016 20:08:17 Europe/Berlin] COLOMBO

@@ -56,3 +56,8 @@ cass_debug.log
 log.txt
 sms-app-error.log
 cass_debug.log
+cass_debug.log
+lbs_debug.log
+log.txt
+newfile.txt
+lbs_client_debug.log
